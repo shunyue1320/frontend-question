@@ -49,6 +49,7 @@ An Front-end technology sharing and exchange.
 ## Vue3优秀开源项目集:
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
+|[汉兜](https://github.com/antfu/handle)| [游戏](https://handle.antfu.me/) | ![stars](https://img.shields.io/github/stars/antfu/handle?label=Stars&logo=GitHub) |
 |[trois](https://github.com/troisjs/trois)| [3D 库](https://troisjs.github.io/examples/demos/1.html) | ![stars](https://img.shields.io/github/stars/troisjs/trois?label=Stars&logo=GitHub) |
 |[mini-vue3](https://github.com/cuixiaorui/mini-vue)| [视频教程](https://www.bilibili.com/video/BV1Zy4y1J73E) | ![stars](https://img.shields.io/github/stars/cuixiaorui/mini-vue?label=Stars&logo=GitHub) |
 |[vue3-jd-h5](https://github.com/GitHubGanKai/vue3-jd-h5)| [链猫商城](http://gankai.gitee.io/vue-jd-h5/#/mine) | ![stars](https://img.shields.io/github/stars/GitHubGanKai/vue3-jd-h5?label=Stars&logo=GitHub) |
@@ -145,6 +146,15 @@ An Front-end technology sharing and exchange.
 | [wabt](https://github.com/WebAssembly/wabt) | [WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt) | ![stars](https://img.shields.io/github/stars/WebAssembly/wabt?label=Stars&logo=GitHub) |
 | [emscripten](https://github.com/emscripten-core/emscripten) | [C and C++ to WebAssembly](https://emscripten.org/) | ![stars](https://img.shields.io/github/stars/emscripten-core/emscripten?label=Stars&logo=GitHub) |
 | [assemblyscript](https://github.com/AssemblyScript/assemblyscript) | [TypeScript to WebAssembly](https://www.assemblyscript.org/) | ![stars](https://img.shields.io/github/stars/AssemblyScript/assemblyscript?label=Stars&logo=GitHub) |
+
+## java优秀开源项目集： 
+| 项目 | 前端 | stars |
+| ------------- | ------------- | ----- |
+| [电商系统](https://github.com/macrozheng/mall) | [mall-admin-web](https://github.com/macrozheng/mall-admin-web) [网站](http://www.macrozheng.com/admin/#/home) | ![stars](https://img.shields.io/github/stars/macrozheng/mall?label=Stars&logo=GitHub) |
+| [管理系统](https://github.com/elunez/eladmin) | [eladmin-web](https://github.com/elunez/eladmin-web) [网站](https://el-admin.xin/) | ![stars](https://img.shields.io/github/stars/elunez/eladmin?label=Stars&logo=GitHub) |
+| [秒杀系统](https://github.com/qiurunze123/miaosha) | / | ![stars](https://img.shields.io/github/stars/qiurunze123/miaosha?label=Stars&logo=GitHub) |
+| [微人事管理系统](https://github.com/lenve/vhr)     | / | ![stars](https://img.shields.io/github/stars/lenve/vhr?label=Stars&logo=GitHub) |
+| [学之思开源考试系统](https://github.com/mindskip/xzs) | [网站](https://www.mindskip.net/) | ![stars](https://img.shields.io/github/stars/mindskip/xzs?label=Stars&logo=GitHub) |
 
 ## 在线编程平台：
 | 网址 |
