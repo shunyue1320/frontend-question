@@ -1,4 +1,4 @@
-# JavaScript 面试题
+# JavaScript 题库
 
 #### 1. 每隔 1s 输出一个结果：
 
