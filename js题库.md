@@ -1,7 +1,43 @@
 # JavaScript 题库
 
-#### 1. 每隔 1s 输出一个结果：
+### 2. 实现 Promise.retry，成功后 resolve 结果，失败后重试，尝试超过一定次数才真正的 reject
+```js
+//默认失败重试5次
+Promise.retry = (fun, limit = 5) => {
+  return new Promise((resolve, reject) => {
+    let _num = 1
+    let retryFn = async () => {
+      try{
+        const data = await fun()
+        resolve(data)
+      } catch (e) {
+        _num++ >= limit ? reject(e) : retryFn()
+      }
+    }
+    retryFn()
+  })
+}
 
+let k = 1
+function requestData() {
+  return new Promise((resolve, reject) => {
+    if (k++ > 2) {
+      resolve()
+      console.log('成功获取到数据')
+    } else {
+      console.log('数据获取失败！')
+      reject()
+    }
+  })
+}
+
+Promise.retry(requestData)
+// 数据获取失败！
+// 数据获取失败！
+// 成功获取到数据
+```
+
+#### 1. 每隔 1s 输出一个结果：
 ```js
 let list = [1, 2, 3, 4]
 let square = (num) => {
@@ -22,7 +58,7 @@ async function test1() {
 }
 test1()
 
-//2. for of 方法
+//2. for of 方法  （串行执行）
 async function test2() {
   for (let num of list) {
     const res = await square(num)
@@ -38,5 +74,7 @@ function test3(i = 0) {
   test3(i + 1)
 }
 test3()
+
+//提示： forEach是并行执行，并非串行执行，所以无法使用
 ```
 
