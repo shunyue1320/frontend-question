@@ -1,5 +1,34 @@
 # JavaScript 题库
 
+
+### 3. 模拟实现 Array.prototype.splice 方法
+```js
+Array.prototype._splice = function (start, deleteCount, ...addArray) {
+  if (start < 0) {
+    start += this.length
+    if (start < 0) start = 0
+  } else if (start > this.length) {
+    start = this.length
+  }
+
+  if (typeof deleteCount === undefined) {
+    deleteCount = this.length - start
+  }
+
+  const afterArray = this.slice(start + deleteCount)
+  const removeArray = this.slice(start, start + deleteCount)
+
+  let index = start
+  addArray.concat(afterArray).forEach((vlaue) => {
+    this[index] = vlaue
+    index++
+  })
+  this.length = index
+
+  return removeArray
+}
+```
+
 ### 2. 实现 Promise.retry，成功后 resolve 结果，失败后重试，尝试超过一定次数才真正的 reject
 ```js
 //默认失败重试5次
