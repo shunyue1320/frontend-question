@@ -1,5 +1,23 @@
 # JavaScript 题库
 
+### 4.实现一个 normalize 函数，进行如下功能转化
+示例一: `'abc'  ⇨  {value: 'abc'}`
+示例二：`'[abc[bcd[def]]]'  ⇨  {value: 'abc', children: {value: 'bcd', children: {value: 'def'}}}`
+```js
+const normalize = (str) => {
+  var result = {}
+  str.split(/[\[\]]/g).filter(Boolean).reduce((obj, item, index, that) => {
+    obj.value = item
+    if(index !== that.length -1) {
+      return (obj.children = {})
+    }
+  }, result)
+  return result
+}
+
+//提示：filter(Boolean) 是" filter((v) => { return Boolean(v); }) "的缩写
+//reduce(计算后的返回值, 当前元素, 当前索引, 当前元素所属的数组对象)
+```
 
 ### 3. 模拟实现 Array.prototype.splice 方法
 ```js
