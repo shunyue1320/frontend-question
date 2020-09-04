@@ -1,5 +1,33 @@
 # JavaScript 题库
 
+### 5. 用最简洁代码实现 indexOf 方法
+```js
+//方法一，正则
+function indexOf(str, target, start = 0) {
+  if (start < 0) start += str.length
+  if (start >= str.length) return -1
+
+  const reg = new RegExp(`${target}`, 'g')
+  reg.lastIndex = start
+  const result = reg.exec(str)
+  return result ? result.index : -1
+}
+
+//方法二， for遍历
+function indexOf(str, target, start = 0) {
+  if (start < 0) start += str.length
+  if (start >= str.length) return -1
+
+  for (let i = start; i < str.length; i++) {
+    if (str.slice(i, i + target.length) == target) return i
+  }
+  return -1
+}
+
+//提示：new RegExp(需要匹配的内容, 匹配的模式)
+// 'g' 全局匹配 'gi' 全局匹配且忽略大小写
+```
+
 ### 4.实现一个 normalize 函数，进行如下功能转化
 示例一: `'abc'  ⇨  {value: 'abc'}`
 示例二：`'[abc[bcd[def]]]'  ⇨  {value: 'abc', children: {value: 'bcd', children: {value: 'def'}}}`
@@ -29,7 +57,7 @@ Array.prototype._splice = function (start, deleteCount, ...addArray) {
     start = this.length
   }
 
-  if (typeof deleteCount === undefined) {
+  if (typeof deleteCount === 'undefined') {
     deleteCount = this.length - start
   }
 
