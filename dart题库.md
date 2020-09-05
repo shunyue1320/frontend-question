@@ -1,6 +1,6 @@
 1. 下面关于Dart语言说法正确的是？
 
-- [ ] A、Dart是少数同时支持JIT和AOT的语言之一。
+- [x] A、Dart是少数同时支持JIT和AOT的语言之一。
 
 - [ ] B、Dart中的Isolate共享内容，属于多线程模型。
 
