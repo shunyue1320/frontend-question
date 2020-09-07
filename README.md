@@ -4,7 +4,7 @@
 ## Vue:
 ____
 **1. Vue 中的 computed 和 watch 的区别是什么？**
-### 
+
 ```js
 computed：计算属性
 计算属性是由data中的已知值，得到的一个新值。
