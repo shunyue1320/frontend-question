@@ -1,5 +1,34 @@
 # JavaScript 题库
 
+### 7. 求多个数组之间的交集
+```js
+function getArrIntersect(...args) {
+  if (args.length == null) return []
+  if (args.length == 1) return args[0]
+
+  return args.reduce((IntersectArr, currentArr) => {
+    // 返回交集数组内存在于当前数组内的子项
+    return IntersectArr.filter(item => currentArr.includes(item))
+  })
+}
+
+getArrIntersect([1,2,3], [2,3,4]) //[2,3]
+```
+
+### 6.将'10000000'形式的字符串，以每3位进行分隔展示'10.000.000'
+```js
+// 德国以 . 分割金钱, 转到德国当地格式化方案即可
+Number('10000000').toLocaleString('de-DE')       //10.000.000
+//标准以' , ' 分割
+Number('10000000').toLocaleString()              //10,000,000
+
+//字符串数字间 . 分割
+'10000000abc10000000'.replace(/\B(?=(\d{3})+(?!\d))/g, '.') //"10.000.000abc10.000.000"
+
+//纯数字间 . 分割
+'10000000'.replace(/(\d)(?=(\d{3})+\b)/g, '$1.') //10,000,000
+```
+
 ### 5. 用最简洁代码实现 indexOf 方法
 ```js
 //方法一，正则
