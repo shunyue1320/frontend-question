@@ -1,5 +1,26 @@
 # JavaScript 题库
 
+### 8. 下列输出结果是什么
+```js
+function Foo(){
+ getName = function(){ console.log(1) }
+ return this
+}
+Foo.getName = function(){ console.log(2) }
+Foo.prototype.getName = function(){ console.log(3) }
+var getName = function(){ console.log(4) }
+function getName(){ console.log(5) }
+
+//输出结果
+Foo.getName()                              //2 (先找本身再找prototype方法)
+getName()                                  //4 (预编译function getName先执行,赋值后执行)
+Foo().getName()                            //1
+getName()                                  //1 
+new Foo.getName()                          //2
+new Foo().getName()                        //3 (实例化方法继承prototype)
+new new Foo().getName()                    //3
+```
+
 ### 7. 求多个数组之间的交集
 ```js
 function getArrIntersect(...args) {
