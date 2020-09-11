@@ -1,5 +1,47 @@
 # JavaScript 题库
 
+### 9. Cookie 有哪些属性？其中Secure，httpOnly 分别有什么作用？如何使用原生 node.js 操作 cookie？ 
+```js
+cookie属性包括：name、value、expires、domain、path、secure、HttpOnly
+
+//Expires属性：
+Expires是cookie失效日期Expires必须是 GMT 格式的时间 （可以通过 new Date().toGMTString()或者 new Date().toUTCString() 来获得）
+
+//Domain是域名，Path是路径，两者加起来就构成了 URL:
+Domain和Path一起来限制 cookie 能被哪些 URL 访问。
+即请求的URL是Domain或其子域、且URL的路径是Path或子路径，则都可以访问该cookie。
+
+//Secure属性: 
+设置Secure属性意味着保持Cookie通信只限于加密传输
+//HttpOnly属性: 
+HttpOnly属性指示浏览器不要在除HTTP（和 HTTPS)请求之外暴露Cookie
+一个有HttpOnly属性的Cookie，不能通过非HTTP方式来访问，(例如，引用 document.cookie）
+
+//原生node获取cookie：
+var cookies = {};
+req.headers.cookie && req.headers.cookie.split(';').forEach(function( Cookie ) {
+    var parts = Cookie.split('=')
+    cookies[ parts[ 0 ].trim() ] = ( parts[ 1 ] || '' ).trim()
+})
+console.log(cookies)
+
+//原生node设置cookie:
+ res.writeHead(200, {
+  'Set-Cookie': "userId=828; userName=hulk; expire="+date.toGMTString(),
+  'Content-Type': 'text/html'
+});
+
+//使用 cookie-parser 库操作 cookie:
+var express=require("express")
+var cookieParser = require('cookie-parser')
+var app=express()
+app.use(cookieParser())  //使用cookie必须引入cookieParser中间件
+...
+res.cookie("add",adds,{maxAge: 900000, httpOnly: true}) //设置
+res.send("cookie-add:"+req.cookies.add)                 //获取
+```
+
+
 ### 8. 下列输出结果是什么
 ```js
 function Foo(){
