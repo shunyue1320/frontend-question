@@ -1,5 +1,26 @@
 # JavaScript 题库
 
+### 12. Array.forEach()与 Array.map()的区别，Array.slice()与 Array.splice()的区别
+```js
+
+```
+
+### 11. 写出以下代码运行后的输出
+```js
+ setTimeout(function(){
+ console.log(1)
+ })
+ new Promise(function(resolve,reject){
+ console.log(2);
+ resolve(3)
+ }).then(function(val){
+ console.log(val)
+ })
+ console.log(4)
+
+ // 2 4 3 1
+```
+
 ### 10. 用多种方法 JAVAScript 实现继承。 
 ```js
 //1. 原型链继承
