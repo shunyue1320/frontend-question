@@ -62,6 +62,7 @@ B. Vue 实例从创建到销毁的过程，就是生命周期
 C. created 表示完成数据观测、属性和方法的运算和初始化事件，此时 $el 属性还未显示出来
 D. 页面首次加载过程中，会依次触发 beforeCreate，created，beforeMount，mounted，beforeUpdate，updated
 
+1. BCD   2. ABCD   3. BD   4. B   5. D   6. B   7. C   8. C   9. C   10. D
 ```
 
 ## 问答题：
