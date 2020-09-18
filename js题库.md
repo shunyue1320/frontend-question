@@ -1,5 +1,17 @@
 # JavaScript 题库
 
+### 13. 没有 prototype 的两种函数：
+```js
+//1.箭头函数：
+let a = () => {}
+console.log(a.prototype) //undefined
+
+//2.bind执行函数：
+let a = function() {}
+let b = a.bind(this)
+console.log(b.prototype) //undefined
+```
+
 ### 12. Array.forEach()与 Array.map()的区别，Array.slice()与 Array.splice()的区别
 ```js
 forEach 遍历 并发  /  map  修改数据 返回数组
