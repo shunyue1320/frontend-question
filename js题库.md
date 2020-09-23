@@ -1,5 +1,42 @@
 # JavaScript 题库
 
+### 20. 请简述浏览器解析，加载页面的过程:
+```js
+
+```
+
+
+### 19. 解释$rootScrop 和 $scope 的区别: 
+```js
+
+```
+
+
+### 18. document load 和 documen ready 的区别：
+```js
+
+```
+
+### 17. js如何自定义事件：
+```js
+
+```
+
+### 16. <div><p>123</p><p>456</p></div> 匹配出所有 p 中的内容 输出[123, 456]：
+```js
+
+```
+
+### 15. call bind apply区别：
+```js
+
+```
+
+### 14. var let const 的区别：
+```js
+
+```
+
 ### 13. 没有 prototype 的两种函数：
 ```js
 //1.箭头函数：
@@ -14,8 +51,8 @@ console.log(b.prototype) //undefined
 
 ### 12. Array.forEach()与 Array.map()的区别，Array.slice()与 Array.splice()的区别
 ```js
-forEach 遍历 并发  /  map  修改数据 返回数组
-slice 返回截取数组 不改变原始数组  /  splice  返回截取数组  改变原始数组 可插入值
+forEach: 遍历 并发                   /  map:     修改数据 返回数组
+slice:   返回截取数组 不改变原始数组  /  splice:  返回截取数组  改变原始数组 可插入值
 ```
 
 ### 11. 写出以下代码运行后的输出
@@ -36,45 +73,41 @@ slice 返回截取数组 不改变原始数组  /  splice  返回截取数组  �
 
 ### 10. 用多种方法 JAVAScript 实现继承。 
 ```js
-//1. 原型链继承
+//1. 原型链继承       (缺点：多个实例对引用类型的操作会被篡改)
 SubType.prototype = new SuperType()
 new SubType()
-//缺点：多个实例对引用类型的操作会被篡改
 
 
-//2. 借用构造函数继承 
+//2. 借用构造函数继承 (缺点：只能继承父类的实例属性和方法，不能继承原型属性/方法, 无法实现复用，每个子类都有父类实例函数的副本，影响性能)
 function A() {
     this.name='小明'
 }
 function B() {
-    A.call(this) //继承自A
+    A.call(this)                //继承自A
 }
 var AB = new B()
-//缺点： 只能继承父类的实例属性和方法，不能继承原型属性/方法, 无法实现复用，每个子类都有父类实例函数的副本，影响性能
 
 
-//3. 组合继承 (借用构造函数继承 与 原型链继承 的结合)
-//缺点：原型存在两份属性/方法
+//3. 组合继承        (缺点：原型存在两份属性/方法)
+(借用构造函数继承 与 原型链继承 的结合)
 
 
-//4. 原型式继承
+//4. 原型式继承      (缺点：浅拷贝 易篡改)
 function object(obj){
   function F(){}
   F.prototype = obj
   return new F()
 }
-//缺点：浅拷贝 易篡改
 
 
-//5. 寄生式继承
+//5. 寄生式继承      (缺点：无法传递参数 易篡改)
 function createAnother(original){
   var clone = object(original)  // 通过调用 object() 函数创建一个新对象
   clone.sayHi = function(){     // 以某种方式来增强对象
     alert("hi")
   };
-  return clone; // 返回这个对象
+  return clone;                 // 返回这个对象
 }
-//缺点：无法传递参数 易篡改
 
 
 //6. 寄生组合式继承 (结合借用构造函数传递参数和寄生模式实现继承, 这是最成熟的方法，也是现在库实现的方法)
@@ -84,8 +117,7 @@ function inheritPrototype(subType, superType){
   subType.prototype = prototype                      // 指定对象，将新创建的对象赋值给子类的原型
 }
 
-// 父类初始化实例属性和原型属性
-function SuperType(name){
+function SuperType(name){                            //父类初始化实例属性和原型属性
   this.name = name
   this.colors = ["red", "blue", "green"]
 }
@@ -93,25 +125,22 @@ SuperType.prototype.sayName = function(){
   alert(this.name)
 }
 
-// 借用构造函数传递增强子类实例属性（支持传参和避免篡改）
-function SubType(name, age){
+function SubType(name, age){                         //借用构造函数传递增强子类实例属性（支持传参和避免篡改）
   SuperType.call(this, name)
   this.age = age
 }
 
-// 将父类原型指向子类
-inheritPrototype(SubType, SuperType)
+inheritPrototype(SubType, SuperType)                 //将父类原型指向子类
 
-// 新增子类原型属性
-SubType.prototype.sayAge = function(){
+SubType.prototype.sayAge = function(){               //新增子类原型属性
   alert(this.age)
 }
 
 var instance1 = new SubType("xyc", 23)
 var instance2 = new SubType("lxy", 23)
 
-instance1.colors.push("2") // ["red", "blue", "green", "2"]
-instance1.colors.push("3") // ["red", "blue", "green", "3"]
+instance1.colors.push("2")                           // ["red", "blue", "green", "2"]
+instance1.colors.push("3")                           // ["red", "blue", "green", "3"]
 
 
 //7. 混入方式继承多个对象
@@ -120,46 +149,39 @@ function MyClass() {
      OtherSuperClass.call(this)
 }
 
-// 继承一个类
-MyClass.prototype = Object.create(SuperClass.prototype)
-// 混合其它
-Object.assign(MyClass.prototype, OtherSuperClass.prototype)
-// 重新指定constructor
-MyClass.prototype.constructor = MyClass
+MyClass.prototype = Object.create(SuperClass.prototype)     //继承一个类
+
+Object.assign(MyClass.prototype, OtherSuperClass.prototype) //混合其它
+
+MyClass.prototype.constructor = MyClass                     //重新指定constructor
 
 MyClass.prototype.myMethod = function() {
-     // do something
+  // do something
 }
 
 //8. ES6类继承extends
 class Rectangle {
-    // constructor
     constructor(height, width) {
         this.height = height
         this.width = width
     }
-    
-    // Getter
     get area() {
         return this.calcArea()
     }
     
-    // Method
     calcArea() {
         return this.height * this.width
     }
 }
 
 const rectangle = new Rectangle(10, 20)
-console.log(rectangle.area) //200
+console.log(rectangle.area)   //200
 /**********继承*********/
 class Square extends Rectangle {
 
   constructor(length) {
     super(length, length)
-    
-    // 如果子类中存在构造函数，则需要在使用“this”之前首先调用 super()。
-    this.name = 'Square'
+    this.name = 'Square'      //如果子类中存在构造函数，则需要在使用 this 之前首先调用 super()。
   }
 
   get area() {
@@ -168,7 +190,7 @@ class Square extends Rectangle {
 }
 
 const square = new Square(10)
-console.log(square.area) // 输出 100
+console.log(square.area)      //100
 ```
 
 ### 9. Cookie 有哪些属性？其中Secure，httpOnly 分别有什么作用？如何使用原生 node.js 操作 cookie？ 
