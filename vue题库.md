@@ -1,5 +1,55 @@
 # Vue:
-## 多选题：
+
+
+## 问答题：
+
+### 3. vue组件化的作用：
+```js
+优点： 提高代码可复用性，降低代码的复杂性，可维护性 提高开发效率
+使用场景：
+    通用组件： （提高代码复用性：按钮组件，输入框组件，布局组件）
+    业务组件： （具体谋部分业务逻辑： 登入注册组件，通用头尾组件，轮播组件）
+    页面组件： （个页面区分独立模块：列表卡片，详情页）
+组件使用：
+    通信：    props, $emit/$on, provide/inject, $children/$parent, $root, $attrs/$listeners
+    内容分发：<slot>, <template>, v-slot
+    优化：    is, keep-alive, 异步组件
+组件本质：
+    组件配置 -> VueComponent实例 -> render() -> Virtual DOM -> DOM
+    目的产生虚拟DOM
+```
+
+### 2. vue的 activated 和 deactivated 生命周期作用:
+```js
+<keep-alive>包裹的动态组件会被缓存，它是一个抽象组件，它自身不会渲染一个dom元素，也不会出现在父组件链中。
+当组件在 <keep-alive> 内被切换时执行 activated 和 deactivated 这两个钩子函数
+activated：   激活组件触发
+deactivated： 停用组件触发
+```
+
+
+### 1. Vue 中的 computed 和 watch 的区别是什么？
+
+```js
+computed：计算属性
+计算属性是由data中的已知值，得到的一个新值。
+这个新值只会根据已知值的变化而变化，其他不相关的数据的变化不会影响该新值。
+计算属性不在data中，计算属性新值的相关已知值在data中。
+别人变化影响我自己。
+
+
+watch：数据监听器
+监听data中数据的变化
+监听的数据就是data中的已知值
+我的变化影响别人
+
+1.watch擅长处理的场景：一个数据影响多个数据
+
+2.computed擅长处理的场景：一个数据受多个数据影响
+```
+
+
+## 选择题：
 ```js
 1. Vue 实例的 data 属性，可以在哪些生命周期中获取到？
 A. beforeCreate
@@ -63,25 +113,4 @@ C. created 表示完成数据观测、属性和方法的运算和初始化事件
 D. 页面首次加载过程中，会依次触发 beforeCreate，created，beforeMount，mounted，beforeUpdate，updated
 
 1. BCD   2. ABCD   3. BD   4. B   5. D   6. B   7. C   8. C   9. C   10. D
-```
-
-## 问答题：
-**1. Vue 中的 computed 和 watch 的区别是什么？**
-
-```js
-computed：计算属性
-计算属性是由data中的已知值，得到的一个新值。
-这个新值只会根据已知值的变化而变化，其他不相关的数据的变化不会影响该新值。
-计算属性不在data中，计算属性新值的相关已知值在data中。
-别人变化影响我自己。
-
-
-watch：数据监听器
-监听data中数据的变化
-监听的数据就是data中的已知值
-我的变化影响别人
-
-1.watch擅长处理的场景：一个数据影响多个数据
-
-2.computed擅长处理的场景：一个数据受多个数据影响
 ```
