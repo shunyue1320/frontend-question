@@ -3,6 +3,93 @@
 
 ## 问答题：
 
+### 8. 生命周期：
+
+
+### 7. <keep-alive> 作用：
+```html
+<!-- include包含的组件(可以为字符串，数组，以及正则表达式,只有匹配的组件会被缓存) -->
+<!-- exclude排除的组件(以为字符串，数组，以及正则表达式,任何匹配的组件都不会被缓存) -->
+<!-- max缓存组件的最大值(类型为字符或者数字,可以控制缓存组件的个数) -->
+<keep-alive :include="[home]" exclude="error" max=10>
+    <router-view />
+</keep-alive>
+<!-- activated: 组件显示触发   |   deactivated：组件隐藏触发  -->
+<!-- 包含在 keep-alive 中，但符合 exclude ，不会调用activated和 deactivated。 -->
+```
+
+### 6. addRoutes 作用：
+```js
+//设置用户可访问的路由
+//当用户登入后， 或者拥有某些特定权限 可要手动添加路由便于用户访问
+this.$router.addRoutes([
+    {
+        path: '/vip',
+        name: 'vip',
+        component: () => import('../views/vip.vue')   //动态引入
+    }
+])
+```
+
+### 5. 组件复用后再次显示无法执行created如何重新请求数据：
+```js
+/* 组件内方法 */
+//1.方法
+export default {
+    created() {
+        this.fatchData()
+    },
+    watch: {
+        $route: {                //监听路由变化
+            handler() {
+                this.fatchData() //请求数据
+            }
+        }
+    }
+}
+
+//2.方法
+export default {
+    watch: {
+        $route: {            //监听路由变化
+            immediate: true, //初始发起请求
+            handler() {
+                console.log("在此请求数据")
+            }
+        }
+    }
+}
+
+/* 路由实现方法 */
+//3.方法 （组件为被渲染）
+beforeRouteEnter(to, from, next) {
+    fatchData(to.params.id, post => {
+        next(vm => vm.setData(posy))    //请求数据后通过next内回调设置到组件内
+    })
+}
+
+//4. 方法 （组件已渲染）
+beforeRouteUpdate(to, from, next) {
+    this.post = null                    //将原理组件内的数据清空
+    fatchData(to.params.id, post => {   //重新获取数据并渲染
+        this.setData(post)
+        next()
+    })
+}
+```
+
+### 4. <style scoped> 深度作用选择器
+```css
+<style scoped>
+.parent >>> .children { /* 只实用与css */ }
+</style>
+
+<style lang="scss" scoped>
+.parent /deep/ .children { /* 实用与scss */ }
+/* or */
+.parent ::v-deep .children { /* 实用与scss */ }
+</style>
+```
 ### 3. vue组件化的作用：
 ```js
 优点： 提高代码可复用性，降低代码的复杂性，可维护性 提高开发效率
