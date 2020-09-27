@@ -6,7 +6,7 @@
 
 <p align="center">
 
-[![MIT](https://img.shields.io/github/license/shunyue1320/frontend-question)](https://github.com/shunyue1320/frontend-question/blob/master/LICENSE)
+[![](https://img.shields.io/badge/Juejin-掘金-blue)](https://juejin.im/user/3702810894152983)
 [![Dependence](https://img.shields.io/david/shunyue1320/frontend-question)](https://david-dm.org/shunyue1320/frontend-question)
 [![DevDependencies](https://img.shields.io/david/dev/shunyue1320/frontend-question)](https://david-dm.org/shunyue1320/frontend-question?type=dev)
 [![Release](https://img.shields.io/github/v/release/shunyue1320/frontend-question)](https://github.com/shunyue1320/frontend-question/releases/latest)
