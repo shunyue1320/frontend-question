@@ -6,10 +6,11 @@
 
 <p align="center">
 
-[![](https://img.shields.io/badge/Juejin-掘金-blue)](https://juejin.im/user/3702810894152983)
-[![Dependence](https://img.shields.io/david/shunyue1320/frontend-question)](https://david-dm.org/shunyue1320/frontend-question)
-[![DevDependencies](https://img.shields.io/david/dev/shunyue1320/frontend-question)](https://david-dm.org/shunyue1320/frontend-question?type=dev)
-[![Release](https://img.shields.io/github/v/release/shunyue1320/frontend-question)](https://github.com/shunyue1320/frontend-question/releases/latest)
+[![](https://img.shields.io/badge/Juejin-掘金-007FFF)](https://juejin.im/user/3702810894152983)
+[![](https://img.shields.io/badge/CSDN-博客-E33E33)](https://blog.csdn.net/qq_41614928)
+[![](https://img.shields.io/badge/Zhihu-知乎-0084FF)](https://www.zhihu.com/people/shun-yue-45)
+[![](https://img.shields.io/badge/bilili-哔哩哔哩-FF69b4)](https://space.bilibili.com/475498258)
+[![](https://img.shields.io/badge/公众号-小编程-FBD34D)](#交流)
 
 </p>
 
