@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://vuepress.vuejs.org/" target="_blank">
-    <img width="180" src="https://iconfont.alicdn.com/t/1f5a98e5-ec25-4347-ba16-f1d28057423f.png" alt="logo">
+    <img width="180" src="https://iconfont.alicdn.com/t/1b67e9e2-e6db-429e-8a47-5d32d9d89f9b.png" alt="logo">
   </a>
 </p>
 
