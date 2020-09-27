@@ -12,7 +12,7 @@ An Front-end technology sharing and exchange.
 [![](https://img.shields.io/badge/CSDN-博客-E33E33)](https://blog.csdn.net/qq_41614928)
 [![](https://img.shields.io/badge/Zhihu-知乎-0084FF)](https://www.zhihu.com/people/shun-yue-45)
 [![](https://img.shields.io/badge/bilili-哔哩哔哩-FF69b4)](https://space.bilibili.com/475498258)
-[![](https://img.shields.io/badge/公众号-爱看编程-FBD34D)](#爱看编程)
+[![](https://img.shields.io/badge/公众号-爱看编程-7ED957)](#爱看编程)
 
 </div>
 
