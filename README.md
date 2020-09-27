@@ -1,6 +1,6 @@
 # 前端知识点归纳：
 
-[1. css知识点总结](https://github.com/shunyue1320/frontend-question/blob/master/css知识点总结.md)
+[1. css ✨知识点总结](https://github.com/shunyue1320/frontend-question/blob/master/css知识点总结.md)
 
 [2. html知识点总结](https://github.com/shunyue1320/frontend-question/blob/master/html知识点总结.md)
 
