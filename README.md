@@ -4,13 +4,16 @@
   </a>
 </p>
 
-<p align="center">
+<div> align="center">
+An Front-end technology sharing and exchange.
+
 [![](https://img.shields.io/badge/Juejin-掘金-007FFF)](https://juejin.im/user/3702810894152983)
 [![](https://img.shields.io/badge/CSDN-博客-E33E33)](https://blog.csdn.net/qq_41614928)
 [![](https://img.shields.io/badge/Zhihu-知乎-0084FF)](https://www.zhihu.com/people/shun-yue-45)
 [![](https://img.shields.io/badge/bilili-哔哩哔哩-FF69b4)](https://space.bilibili.com/475498258)
 [![](https://img.shields.io/badge/公众号-小编程-FBD34D)](#交流)
-</p>
+
+</div>
 
 
 ## 前端知识点归纳：
