@@ -29,12 +29,48 @@
 
 ### 15. call bind apply区别：
 ```js
-
+相同点：都是改变函数体内部 this 的指向
+不同点：
+        1.
 ```
 
 ### 14. var let const 的区别：
 ```js
+/*** 1. 变量提升 ***/
+console.log(a); //正常运行，控制台输出 undefined
+var a = 1;
 
+console.log(b); //报错，Uncaught ReferenceError: b is not defined
+let b = 1;
+
+console.log(c); //报错，Uncaught ReferenceError: c is not defined
+const c = 1;
+
+/*** 2. 暂时性死区 ***/
+//原因： 存在全局变量 tmp，但是块级作用域内 let 又声明了一个 tmp变量，导致后者被绑定在这个块级作用域中，所以在 let 声明变量前，对 tmp 赋值就报错了
+var tmp = 123;
+if (true) {
+	tmp = 'abc';  //报错，Uncaught ReferenceError: tmp is not defined
+	let tmp;
+}
+
+
+/*** 3.特性 ***/
+let const 不可重复   |  var 可以重复声明
+let const 块级作用域 |  var 全局作用域
+const 必须设置初始值
+//案例一：
+for(var i = 0;i < 5;i++){
+  setTimeout(()=>{
+    console.log(i)  //输出5个5      原因：var变量提升至全局作用域，for循环后全局作用域i = 5
+  },i * 1000)
+}
+//案例二：
+for(var i = 0;i < 5;i++){
+  setTimeout(()=>{
+    console.log(i)  //输出0 1 2 3 4 原因：let变量没有提升每个块级作用域里面的 i 独立存在
+  },i * 1000)
+}
 ```
 
 ### 13. 没有 prototype 的两种函数：
