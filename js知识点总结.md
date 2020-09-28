@@ -2,19 +2,33 @@
 
 ### 20. 请简述浏览器解析，加载页面的过程:
 ```js
+1. DNS 查询
+2. TCP 连接
+3. HTTP 请求即响应
+4. 服务器响应
+5. 客户端渲染
 
+客户端渲染：
+  1. 处理 HTML 标记并构建 DOM 树。
+  2. 处理 CSS 标记并构建 CSSOM 树。
+  3. 将 DOM 与 CSSOM 合并成一个渲染树。
+  4. 根据渲染树来布局，以计算每个节点的几何信息。
+  5. 将各个节点绘制到屏幕上。
+
+详情： https://juejin.im/entry/6844903503609987080
 ```
-
-
-### 19. 解释$rootScrop 和 $scope 的区别: 
-```js
-
-```
-
 
 ### 18. document load 和 documen ready 的区别：
 ```js
+1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数
 
+问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响
+
+2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行
+
+在原生的js中不包括ready()这个方法，只有load方法也就是onload事件
+
+详情： https://juejin.im/post/6844903976568094727
 ```
 
 ### 17. js如何自定义事件：
@@ -22,15 +36,27 @@
 js如何自定义事件: Event() 与 CustomEvent()
 区别:
 Event() 适合创建简单的自定义事件，而 CustomEvent() 支持参数传递的自定义事件，它支持 detail 参数，作为事件中需要被传递的数据，并在 EventListener 获取。
+
+//Event:
+// 创建一个支持冒泡且不能被取消的 pingan 事件
+let myEvent = new Event("pingan", {"bubbles":true, "cancelable":false});
+//添加适当的事件监听器
+window.addEventListener('build', function (e) { ... }, false);
+//派发事件
+document.dispatchEvent(myEvent);
+// 事件可以在任何元素触发，不仅仅是document
+testDOM.dispatchEvent(myEvent);
+
+
+//CustomEvent:
 // 创建事件
 let myEvent = new CustomEvent("pingan", {
 	detail: { name: "wangpingan" }
 });
-
 // 添加适当的事件监听器
 window.addEventListener("pingan", e => {
-	alert(`pingan事件触发，是 ${e.detail.name} 触发。`);
-});
+	alert(`pingan事件触发，是 ${e.detail.name} 触发。`)
+})
 document.getElementById("app").addEventListener("click", function () {
     // 派发事件
 		window.dispatchEvent(myEvent);
