@@ -19,12 +19,29 @@
 
 ### 17. js如何自定义事件：
 ```js
+js如何自定义事件: Event() 与 CustomEvent()
+区别:
+Event() 适合创建简单的自定义事件，而 CustomEvent() 支持参数传递的自定义事件，它支持 detail 参数，作为事件中需要被传递的数据，并在 EventListener 获取。
+// 创建事件
+let myEvent = new CustomEvent("pingan", {
+	detail: { name: "wangpingan" }
+});
 
+// 添加适当的事件监听器
+window.addEventListener("pingan", e => {
+	alert(`pingan事件触发，是 ${e.detail.name} 触发。`);
+});
+document.getElementById("app").addEventListener("click", function () {
+    // 派发事件
+		window.dispatchEvent(myEvent);
+  }
+)
 ```
 
 ### 16. `<div><p>123</p><p>456</p></div>` 匹配出所有 p 中的内容 输出[123, 456]：
 ```js
-
+let html = '<div><p>123</p><p>456</p></div>'
+html.match(/[^>]+(?=<\/p>)/img)          //[123, 456]
 ```
 
 ### 15. call bind apply区别：
