@@ -22,7 +22,7 @@
 
 ```
 
-### 16. <div><p>123</p><p>456</p></div> 匹配出所有 p 中的内容 输出[123, 456]：
+### 16. `<div><p>123</p><p>456</p></div>` 匹配出所有 p 中的内容 输出[123, 456]：
 ```js
 
 ```
@@ -31,7 +31,50 @@
 ```js
 相同点：都是改变函数体内部 this 的指向
 不同点：
-        1.
+  1.call( thisValue , arg1, arg2, ... )   //如果call方法没有参数，或者参数为null或undefined，则等同于指向全局对象。
+  //手写call:
+  Function.prototype.myCall = function(that) {
+    that = that || window
+    that.fn = this
+    const args = [...arguments].slice(1)
+    const result = that.fn(...args)
+    delete that.fn
+    return result
+  }
+
+  2.apply( thisValue , [arg1, arg2, ...] ) //与call唯一的区别是接收的第二个参数是数组
+  //手写apply:
+  Function.prototype.myApply = function(that) {
+    that = that || window
+    that.fn = this
+    let restult
+    if (arguments[1]) {
+      restult = that.fn(arguments[1])
+    } else {
+      restult = that.fn()
+    }
+    delete that.fn
+    return restult
+  }
+  示例：
+  var a = [10, 2, 4, 15, 9]
+	Math.max.apply(Math, a)    //15
+	Math.min.apply(null, a)    //2
+
+  3.bind( thisArg[, arg1[, arg2[, ...]]])   //传参结合call与apply两种方法，bind改变this后并不直接执行，而是返回对函数的引用
+  //手写bind:
+  Function.prototype.myBind = function() {
+    let _this = this
+    let that = [].shift.call(arguments)
+    let args = [...arguments]
+    return function () {
+      return _this.apply(that, args.concat([...arguments]))
+    }
+  }
+
+提示：arguments是类数组对象,存在length与callee属性
+作用：arguments可以[...arguments]解构, 参数不定长, 函数柯里化, 递归调用, 函数重载
+详情：https://github.com/mqyqingfeng/Blog/issues/14
 ```
 
 ### 14. var let const 的区别：
