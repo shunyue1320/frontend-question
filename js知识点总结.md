@@ -18,7 +18,7 @@
 详情： https://juejin.im/entry/6844903503609987080
 ```
 
-### 18. document load 和 documen ready 的区别：
+### 18. document load 和 document ready 的区别：
 ```js
 1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数
 
