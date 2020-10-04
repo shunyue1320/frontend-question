@@ -173,8 +173,8 @@ console.log(b.prototype) //undefined
 
 ### 12. Array.forEach()与 Array.map()的区别，Array.slice()与 Array.splice()的区别
 ```js
-forEach: 遍历 并发                   /  map:     修改数据 返回数组
-slice:   返回截取数组 不改变原始数组  /  splice:  返回截取数组  改变原始数组 可插入值
+forEach: 遍历 并发                   |  map:     修改数据 返回数组
+slice:   返回截取数组 不改变原始数组  |  splice:  返回截取数组  改变原始数组 可插入值
 ```
 
 ### 11. 写出以下代码运行后的输出
