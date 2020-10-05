@@ -1,5 +1,31 @@
 # JavaScript 题库
 
+### 21. 用setTimeout和clearTimeout实现setInterval与clearInterval
+```js
+//1. setTimeout 实现一个简单版本的 setInterval
+let timeMap = {}
+let id = 0                               // 简单实现id唯一
+const mySetInterval = (cb, time) => {
+  let timeId = id                        // 将当前 mySetInterval 的 timeId 赋予 id
+  id++                                   // id 自增实现唯一id 可实现多个 mySetInterval 同时使用
+  let fn = () => {
+    cb()
+    timeMap[timeId] = setTimeout(() => {
+      fn()
+    }, time)
+  }
+  timeMap[timeId] = setTimeout(fn, time)
+  return timeId                          // 返回timeId 清楚该定时器时可通过 timeMap[timeId] 清楚该 setTimeout
+}
+
+
+//2. 使用 clearTimeout 实现 clearInterval (id 为 mySetInterval 返回的 timeId)
+const myClearInterval = (id) => {
+  clearTimeout(timeMap[id]) // 通过timeMap[id]获取真正的id
+  delete timeMap[id]
+}
+```
+
 ### 20. 请简述浏览器解析，加载页面的过程:
 ```js
 1. DNS 查询
