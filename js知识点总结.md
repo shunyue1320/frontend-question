@@ -1,5 +1,23 @@
 # JavaScript 题库
 
+### 22. 实现一个函数，运算结果可以满足如下预期结果 (函数柯里化)
+Add(1)(2)            //3
+Add(1，2，3)(10)     //16
+Add(1)(2)(3)(4))(5)  //15 
+```js
+function add(){
+	let args = [...arguments]
+	let addfun = function(){
+		args.push(...arguments)
+		return addfun;
+	}
+	addfun.toString = function(){
+		return args.reduce((a,b)=> a + b)
+	}
+	return addfun
+}
+```
+
 ### 21. 用setTimeout和clearTimeout实现setInterval与clearInterval
 ```js
 //1. setTimeout 实现一个简单版本的 setInterval
