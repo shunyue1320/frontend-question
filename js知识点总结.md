@@ -1,5 +1,43 @@
 # JavaScript 题库
 
+### 23. webpack中的bundle、module、chunk分别是什么
+```js
+Bundle:
+Bundle是由多个不同的模块生成，bundles 包含了早已经过加载和编译的最终源文件版本。
+Bundle 分离（Bundle Splitting）: 这个流程提供了一个优化 build 的方法，允许 webpack 为应用程序生成多个 bundle。最终效果是，当其他某些 bundle 的改动时，彼此独立的另一些 bundle 都可以不受到影响，减少需要重新发布的代码量，因此由客户端重新下载并利用浏览器缓存。
+
+Module: 
+相比于一个完整的项目，项目中分散的一个个功能性模块能够提供一个对于程序员来说更加专注的视角。一个编写良好的模块能够形成一个很清晰的抽象结构，保证之后的维护基于此能够变得规范化和开发具有明确性。
+Module Resolution（模块解析）: 一个模块可以作为另一个模块的依赖项，即在另一个模块中通过import或者require的方式进行引入。模块解析器是一个代码库，通过这个代码库对引入的模块进行解析。我们可以在resolve.modules自定义设置自己的解析路径，以更好地方便个人脚本在项目中的引入，比如如下代码：
+
+Chunk: 
+这个webpack中专用的术语用于管理webpack内部的打包进程。bundle由许多chunk组成，chunk有几种类型，比如说“入口”和“子块”。
+通常chunk和输出的bundle一一对应，但是，有些是一对多的关系。
+Code Splitting:  它表示将你的代码拆分成多个bundle或chunk，之后你可以按需加载它们，而不是简单地加载一个单独的文件。
+Configration:    webpack的配置文件是一段非常普通的javascript代码，它会输出一个对象，然后webpack将会基于对象中的每个属性开始运行。
+
+Asset: 
+这个术语主要是用来描述我们通常在web应用或者其他应用中用到的图片、字体文件、音视频，以及其他类型的一些文件。这些资源通常为一个个单独的文件，但在webpack中，我们借助style-loader或者css-loader也能进行适当的管理。
+
+Dependency Graph: 
+只要一个文件依赖另一个文件才能有所作为，webpack把这个文件定义为依赖项。webpack会从一个入口点开始，通过递归的方式构建出一个依赖关系图，这里面包括每一个被拆分的小模块，每一个asset。
+
+Entry Point: 
+入口点告诉webpack从哪里开始解析，根据构建出来的依赖关系图，从而知道哪些部分将会输出为bundle。
+
+Hot Module Replacement (HMR): 
+即热更新，当项目在运行时发生变更、文件新增、文件删除时，整个项目无需全部全局加载。
+
+Loaders: 
+应用于项目模块源代码的转换，它将按需对文件进行预处理或“加载”。它类似于一个“task-runner”。
+
+Plugin: 
+一个具有apply属性的javascript对象。apply属性通过webpack编译器被调用，以访问整个整个编译生命周期。这些Plugins通常以一种或另一种方式扩展webpack的编译功能。
+
+Target: 
+该配置用于指定项目的运行环境（browser、nodejs、electron等），以使webpack编译器以不同的方式进行编译。
+```
+
 ### 22. 实现一个函数，运算结果可以满足如下预期结果 (函数柯里化)
 Add(1)(2)            //3
 Add(1，2，3)(10)     //16
