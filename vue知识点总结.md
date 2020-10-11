@@ -6,10 +6,10 @@
 ### 8. 生命周期：
 ```js
 //1. 页面生命周期:
-beforeCreate
-created
-beforeMount
-mounted
+beforeCreate  //this.$el = undefined this.$data = undefined
+created       //this.$el = undefined this.$data = 已被初始化
+beforeMount   //this.$el = undefined this.$data = 已被初始化
+mounted       //this.$el = 已被初始化 this.$data = 已被初始化
 /*** 页面更新生命周期 start ***/
 beforeUpdate
 updated
