@@ -4,7 +4,45 @@
 ## 问答题：
 
 ### 8. 生命周期：
+```js
+//1. 页面生命周期:
+beforeCreate
+created
+beforeMount
+mounted
+/*** 页面更新生命周期 start ***/
+beforeUpdate
+updated
+/*** 页面更新生命周期 end ***/
+beforeDestroy
+destroyed
 
+//2. 混入生命周期执行顺序: (每个生命周期都是mixin先执行)
+mixin beforeCreate
+page  beforeCreate
+mixin created
+page  created
+mixin beforeMount
+page  beforeMount
+mixin mounted
+page  mounted
+/*** 页面更新生命周期 start ***/
+mixin beforeUpdate
+page  beforeUpdate
+mixin updated
+page  updated
+/*** 页面更新生命周期 end ***/
+mixin beforeDestroy
+page  beforeDestroy
+mixin destroyed
+page  destroyed
+
+//3. 混入覆盖问题
+mixins: [ mixin1, mixin2 ]
+//(1) page内同名属性与方法 覆盖所有 mixin同名属性与方法
+//(2) mixin2同名属性与方法 覆盖所有 mixin1同名属性与方法
+//(3) 生命周期函数合并成数组执行 执行顺序：mixin1 -> mixin2 -> page
+```
 
 ### 7. <keep-alive> 作用：
 ```html
