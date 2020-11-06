@@ -6,7 +6,8 @@
 
 <div align="center">
 <h1>你不知道的前端知识<h1>
-<p>An Front-end technology sharing and exchange.</p>
+
+An Front-end technology sharing and exchange.
 
 [![](https://img.shields.io/badge/Juejin-掘金-007FFF)](https://juejin.im/user/3702810894152983)
 [![](https://img.shields.io/badge/CSDN-博客-E33E33)](https://blog.csdn.net/qq_41614928)
