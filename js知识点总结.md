@@ -1,5 +1,12 @@
 # JavaScript 题库
 
+### 24. 事件捕获与冒泡：
+```js
+事件流程：先捕获 后冒泡
+
+点击标签：捕获/冒泡事件谁先注册谁先触发
+```
+
 ### 23. webpack中的bundle、module、chunk分别是什么
 ```js
 Bundle:

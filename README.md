@@ -33,3 +33,11 @@ An Front-end technology sharing and exchange.
 
 
 [7. 🌱 dart 知识点总结](https://github.com/shunyue1320/frontend-question/blob/master/dart知识点总结.md)
+
+
+
+Vue优秀开源项目集：
+[网址](https://iczer.gitee.io/vue-antd-admin/#/login) [vue-antd-admin](https://github.com/iczer/vue-antd-admin)
+[网址](https://demo.flatlogic.com/sing-app-vue-dashboard/#/app/dashboard)[sing-app-vue-dashboard](https://github.com/flatlogic/sing-app-vue-dashboard)
+[网址](https://raindays.cn/1400) [Mood](https://github.com/wsydxiangwang/Mood)
+[网址](https://github.com/daoshengfu/Vue-NeteaseCloud-WebMusicApp) [Vue-NeteaseCloud-WebMusicApp](http://123.56.175.108/individuation)
