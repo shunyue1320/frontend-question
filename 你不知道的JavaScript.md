@@ -1,4 +1,4 @@
-# JavaScript 题库
+# 你不知道的 JavaScript
 
 ### 24. 事件捕获与冒泡：
 ```js
