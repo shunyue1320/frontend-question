@@ -5,7 +5,7 @@
 </p>
 
 <div align="center">
-<h1>你不知道的前端知识<h1>
+<h3>你不知道的前端知识<h3>
 
 An Front-end technology sharing and exchange.
 
