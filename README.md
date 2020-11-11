@@ -44,4 +44,4 @@ An Front-end technology sharing and exchange.
 
 
 ## React优秀开源项目集： 
-[双生小日记 前端](https://github.com/oh-bear/2life.git) [双生小日记 后端](https://github.com/airingursb/2life-server)
+[双生小日记](https://www.bilibili.com/video/av26702790) [react-native前端](https://github.com/oh-bear/2life.git) [node后端](https://github.com/airingursb/2life-server)
