@@ -17,7 +17,7 @@ Module:
 Module Resolution（模块解析）: 一个模块可以作为另一个模块的依赖项，即在另一个模块中通过import或者require的方式进行引入。模块解析器是一个代码库，通过这个代码库对引入的模块进行解析。我们可以在resolve.modules自定义设置自己的解析路径，以更好地方便个人脚本在项目中的引入，比如如下代码：
 
 Chunk: 
-这个webpack中专用的术语用于管理webpack内部的打包进程。bundle由许多chunk组成，chunk有几种类型，比如说“入口”和“子块”。
+这个webpack中专用的术语用于管理webpack内部的打包进程。bundle由许多chunk组成，chunk有几种类型，比如说"入口"和"子块"。
 通常chunk和输出的bundle一一对应，但是，有些是一对多的关系。
 Code Splitting:  它表示将你的代码拆分成多个bundle或chunk，之后你可以按需加载它们，而不是简单地加载一个单独的文件。
 Configration:    webpack的配置文件是一段非常普通的javascript代码，它会输出一个对象，然后webpack将会基于对象中的每个属性开始运行。
