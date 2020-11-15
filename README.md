@@ -52,5 +52,5 @@ An Front-end technology sharing and exchange.
 ## JavaScript学习平台：
 [全球最大的JavaScript学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
 [《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
-
-[免费的编程中文书籍 巨多巨全](https://github.com/justjavac/free-programming-books-zh_CN)
+[免费的编程中文书籍 巨多巨全](https://github.com/justjavac/free-programming-books-zh_CN)  
+[《深入浅出Webpack》书](https://github.com/gwuhaolin/dive-into-webpack): [电子版](http://webpack.wuhaolin.cn/)  
