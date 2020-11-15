@@ -49,8 +49,8 @@ An Front-end technology sharing and exchange.
 ## React优秀开源项目集： 
 [双生小日记](https://www.bilibili.com/video/av26702790) [react-native前端](https://github.com/oh-bear/2life.git) [node后端](https://github.com/airingursb/2life-server)
 
-## JavaScript学习平台：
+## 前端学习平台：
 [全球最大的JavaScript学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
-[《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
 [免费的编程中文书籍 巨多巨全](https://github.com/justjavac/free-programming-books-zh_CN)  
+[《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
 [《深入浅出Webpack》书](https://github.com/gwuhaolin/dive-into-webpack): [电子版](http://webpack.wuhaolin.cn/)  
