@@ -47,7 +47,8 @@ An Front-end technology sharing and exchange.
 
 
 ## React优秀开源项目集： 
-[双生小日记app](https://www.bilibili.com/video/av26702790) [react-native前端](https://github.com/oh-bear/2life.git) [node后端](https://github.com/airingursb/2life-server)
+[双生小日记app](https://www.bilibili.com/video/av26702790) [react-native前端](https://github.com/oh-bear/2life.git) [node后端](https://github.com/airingursb/2life-server)  
+[LearnGitBranching](https://github.com/pcottle/learnGitBranching) [学习git分支react网页](https://oschina.gitee.io/learn-git-branching/?NODEMO)  
 
 ## 前端学习平台：
 [全球最大的JavaScript学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
