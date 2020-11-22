@@ -51,7 +51,7 @@ An Front-end technology sharing and exchange.
 [LearnGitBranching](https://github.com/pcottle/learnGitBranching) [学习git分支react网页](https://oschina.gitee.io/learn-git-branching/?NODEMO)  
 
 ## 前端学习平台：
-[全球最大的JavaScript学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
+[GitHub最火的编程学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
 
 [《免费的编程中文书籍巨多巨全》书](https://github.com/justjavac/free-programming-books-zh_CN)  
 [《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
