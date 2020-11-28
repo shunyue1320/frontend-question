@@ -59,3 +59,5 @@ An Front-end technology sharing and exchange.
 
 ## CSS学习平台：
 [You-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css)： [You-need-to-know-css效果展示](https://lhammer.cn/You-need-to-know-css/#/zh-cn/typing)  
+[SpinKit](https://github.com/tobiasahlin/SpinKit): [css加载动画](https://tobiasahlin.com/spinkit/)  
+[css动画创作animista](https://animista.net/)  
