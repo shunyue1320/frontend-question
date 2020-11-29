@@ -42,13 +42,22 @@ An Front-end technology sharing and exchange.
 ## Vue优秀开源项目集：  
 [网址](https://raindays.cn/1400) [Mood](https://github.com/wsydxiangwang/Mood)  
 [网址](https://iczer.gitee.io/vue-antd-admin/#/login) [vue-antd-admin](https://github.com/iczer/vue-antd-admin)  
+[网址](https://panjiachen.github.io/vue-element-admin/#/dashboard) [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)  
 [网址](https://demo.flatlogic.com/sing-app-vue-dashboard/#/app/dashboard) [sing-app-vue-dashboard](https://github.com/flatlogic/sing-app-vue-dashboard)  
 [网址](http://123.56.175.108/#/individuation) [Vue-NeteaseCloud-WebMusicApp](https://github.com/daoshengfu/Vue-NeteaseCloud-WebMusicApp)  
+
 
 
 ## React优秀开源项目集： 
 [双生小日记app](https://www.bilibili.com/video/av26702790) [react-native前端](https://github.com/oh-bear/2life.git) [node后端](https://github.com/airingursb/2life-server)  
 [LearnGitBranching](https://github.com/pcottle/learnGitBranching) [学习git分支react网页](https://oschina.gitee.io/learn-git-branching/?NODEMO)  
+
+## 小程序优秀开源项目集： 
+[头像加口罩小程序](https://github.com/infinityu/mina-wear-mask)  
+[微信小程序商城](https://github.com/EastWorld/wechat-app-mall)  
+[NideShop商城（微信小程序端）](https://github.com/tumobi/nideshop-mini-program) [NideShop商城（服务端代码）](https://github.com/tumobi/nideshop)  
+[微信小程序2048小游戏](https://github.com/natee/wxapp-2048)  
+
 
 ## 前端学习平台：
 [GitHub最火的编程学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
