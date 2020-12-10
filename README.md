@@ -62,9 +62,11 @@ An Front-end technology sharing and exchange.
 ## 前端学习平台：
 [GitHub最火的编程学习平台](https://github.com/freeCodeCamp/freeCodeCamp): [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)  
 
-[《免费的编程中文书籍巨多巨全》书](https://github.com/justjavac/free-programming-books-zh_CN)  
-[《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
+
+[《前端内参》](https://github.com/coffe1891/frontend-hard-mode-interview)  
 [《深入浅出Webpack》书](https://github.com/gwuhaolin/dive-into-webpack): [电子版](http://webpack.wuhaolin.cn/)  
+[《你不知道的JavaScript》书](https://github.com/getify/You-Dont-Know-JS): [英文版](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
+[《免费的编程中文书籍巨多巨全》书](https://github.com/justjavac/free-programming-books-zh_CN)  
 
 ## CSS学习平台：
 [You-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css)： [You-need-to-know-css效果展示](https://lhammer.cn/You-need-to-know-css/#/zh-cn/typing)  
