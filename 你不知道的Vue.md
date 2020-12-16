@@ -1,5 +1,14 @@
 # 你不知道的 Vue
 
+### 10. 继承 mixins 指向问题：
+```js
+import mixinModel from '~/plugins/mixins/mixinModel' //配置打包只引入一次
+//无论for生成了多少组件， 所有组件mixins内继承的方法始终指向同一个内存地址
+export default {
+  mixins: [ mixinModel ]  //每个组件mixinModel内的方法都指向同一个方法
+}  
+```
+
 ### 9. 在vue的组件中，data要用function返回对象呢？
 ```js
 当一个组件被定义， data 必须声明为返回一个初始数据对象的函数，因为组件可能被用来创建多个实例。
