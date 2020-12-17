@@ -91,6 +91,7 @@ An Front-end technology sharing and exchange.
 [《免费的编程中文书籍》](https://github.com/justjavac/free-programming-books-zh_CN) | ![stars](https://img.shields.io/github/stars/justjavac/free-programming-books-zh_CN?label=Stars&logo=GitHub) |
 [《深入浅出Webpack》](https://github.com/gwuhaolin/dive-into-webpack) [[电子版]](http://webpack.wuhaolin.cn/) | ![stars](https://img.shields.io/github/stars/gwuhaolin/dive-into-webpack?label=Stars&logo=GitHub) |
 [《你不知道的JavaScript》](https://github.com/getify/You-Dont-Know-JS)[[英文版]](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md) | ![stars](https://img.shields.io/github/stars/getify/You-Dont-Know-JS?label=Stars&logo=GitHub) |
+[《TypeScript入门教程》](https://github.com/xcatliu/typescript-tutorial)[[电子版]](https://ts.xcatliu.com/) | ![stars](https://img.shields.io/github/stars/xcatliu/typescript-tutorial?label=Stars&logo=GitHub) |
 
 ## CSS学习平台：
 | 项目 | 网址 | stars |
@@ -106,4 +107,5 @@ An Front-end technology sharing and exchange.
 | [jsrun](http://js.jsrun.net/) |
 | [toolfk](https://www.toolfk.com/) |
 | [codepen](https://codepen.io/) |
+| [jsfiddle](https://jsfiddle.net/) |
 | [codesandbox](https://codesandbox.io/) |
