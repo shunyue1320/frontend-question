@@ -42,6 +42,7 @@ An Front-end technology sharing and exchange.
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
 | [Mood](https://github.com/wsydxiangwang/Mood) | [博客 Mood](https://raindays.cn/) | ![stars](https://img.shields.io/github/stars/wsydxiangwang/Mood?label=Stars&logo=GitHub) |
+| [仿酷狗音乐](https://github.com/lavyun/vue-demo-kugou) |  | ![stars](https://img.shields.io/github/stars/lavyun/vue-demo-kugou?label=Stars&logo=GitHub) |
 | [高仿网易云音乐](https://github.com/daoshengfu/Vue-NeteaseCloud-WebMusicApp)  |  | ![stars](https://img.shields.io/github/stars/daoshengfu/Vue-NeteaseCloud-WebMusicApp?label=Stars&logo=GitHub) |
 | [eladmin](https://github.com/elunez/eladmin) | [前后端 eladmin](https://el-admin.xin/login?redirect=%2Fdashboard) | ![stars](https://img.shields.io/github/stars/elunez/eladmin?label=Stars&logo=GitHub) |
 | [ngx-admin](https://github.com/akveo/ngx-admin) | [模板 ngx-admin](https://akveo.github.io/ngx-admin/) | ![stars](https://img.shields.io/github/stars/akveo/ngx-admin?label=Stars&logo=GitHub) |
@@ -60,6 +61,7 @@ An Front-end technology sharing and exchange.
 | 后端  | web端 | 移动端 | stars |
 | ------------- | ------------- | ----- | --- |
 | [双生小日记](https://github.com/airingursb/2life-server) | [双生小日记介绍](https://www.bilibili.com/video/av26702790) | [IOS react-native](https://github.com/oh-bear/2life) | ![stars](https://img.shields.io/github/stars/oh-bear/2life?label=Stars&logo=GitHub) |
+| [nuxt博客系统](https://github.com/eshengsky/iBlog) |  |  | ![stars](https://img.shields.io/github/stars/eshengsky/iBlog?label=Stars&logo=GitHub) |
 | [Dart-Cms 电影系统](https://github.com/abcd498936590/Dart-Cms) | [后台 Dart-Cms-Manage](https://github.com/abcd498936590/Dart-Cms-Manage) | [安卓 flutter](https://github.com/abcd498936590/Dart-Cms-Flutter) | ![stars](https://img.shields.io/github/stars/abcd498936590/Dart-Cms?label=Stars&logo=GitHub) |
 
 
