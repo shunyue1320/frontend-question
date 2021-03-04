@@ -40,6 +40,7 @@ An Front-end technology sharing and exchange.
 
 ## Vue3优秀开源项目集:
 | 项目  | 网址 | stars |
+| ------------- | ------------- | ----- |
 |[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)| [模板 vue3-admin](https://armour.github.io/vue-typescript-admin-template/#/guide/index) | ![stars](https://img.shields.io/github/stars/Armour/vue-typescript-admin-template?label=Stars&logo=GitHub) |
 
 
@@ -102,6 +103,7 @@ An Front-end technology sharing and exchange.
 [《Docker从入门到实践》](https://github.com/yeasy/docker_practice)[[电子版]](https://yeasy.gitbook.io/docker_practice/) | ![stars](https://img.shields.io/github/stars/yeasy/docker_practice?label=Stars&logo=GitHub) |
 [《TypeScript入门教程》](https://github.com/xcatliu/typescript-tutorial)[[电子版]](https://ts.xcatliu.com/) | ![stars](https://img.shields.io/github/stars/xcatliu/typescript-tutorial?label=Stars&logo=GitHub) |
 [《你不知道的JavaScript》](https://github.com/getify/You-Dont-Know-JS)[[英文版]](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md) | ![stars](https://img.shields.io/github/stars/getify/You-Dont-Know-JS?label=Stars&logo=GitHub) |
+[《现代JavaScript教程中文版》](https://github.com/javascript-tutorial/zh.javascript.info) [[电子版]](https://zh.javascript.info/) | ![stars](https://img.shields.io/github/stars/javascript-tutorial/zh.javascript.info?label=Stars&logo=GitHub) |
 
 ## CSS学习平台：
 | 项目 | 网址 | stars |
