@@ -1,5 +1,26 @@
 # 你不知道的 Vue
 
+### 13. vue中key的作用和工作原理：
+```
+key能够高效更新虚拟DOM，其原理是vue在patch过程中通过key精确判断两个节点是否相同，从而避免相同节点再次渲染，减少DOM操纵提高性能
+(原因见vue源码：src/core/vdom/patch.js 424 行)
+```
+
+### 12.  Vue组件data选项为什么必须是个函数而Vue的根实例则没有此限制：
+```
+1. vue组件可能存在多个实例，所以每次组件复用时 data 都会指向同一个地址，当data选项是函数时每次获取data都返回一个全新对象
+ (原因见vue源码：src/core/instance/state.js 114 行)
+
+2. 根实例只存在一个，所以规避了这种情况
+```
+
+### 11. v-if和v-for谁的优先级高，如果同时出现，应该怎么优化性能：
+```
+v-for解析优先级高于v-if (原因见vue源码：src/compiler/codegen/index.js 64行)
+如果同时出现，每次渲染都会先执行循环再判断条件
+优化：在外层嵌套一个template进行v-if判断
+```
+
 ### 10. 继承 mixins 指向问题：
 ```js
 import mixinModel from '~/plugins/mixins/mixinModel' //配置打包只引入一次
@@ -9,7 +30,7 @@ export default {
 }  
 ```
 
-### 9. 在vue的组件中，data要用function返回对象呢？
+### 9. 在vue的组件中，data用function返回对象原因：
 ```js
 当一个组件被定义， data 必须声明为返回一个初始数据对象的函数，因为组件可能被用来创建多个实例。
 如果 data 仍然是一个纯粹的对象，则所有的实例将共享引用同一个数据对象！
