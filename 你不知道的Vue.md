@@ -1,5 +1,111 @@
 # 你不知道的 Vue
 
+## vue 3.0
+
+### vue3.0的新特性：
+```
+1. 虚拟dom重写 更详细，编译时更好的警告报错反馈
+2. 优化slots的生成，减少不必要的重绘
+3. 静态树 静态属性的提升，把静态属性标记出来，大大降低静态重复渲染与patch
+4. 使用proxy代替defineProperty
+5. 体积小：通过摇树优化核心库体机
+6. 更容易维护： TypeScript + 模块化
+7. 跨平台更遍历：编译器核心和运行时核心与平台无关
+8. 更易使用：对 TypeScript 支持，更好的调试，独立的响应化模块，Composition API
+```
+
+
+## vue 2.x
+
+### nextTick作用及原理：
+```
+1. vue中的异步更新策略导致数据更改后不会立刻改变dom，此时需要第一时间获取更新后的dom则使用nextTick
+2. vue中dom更新是利用微任务异步执行的。避免了 wathcher 多次触发带来的重复渲染，
+   nextTick 方法在队列末尾添加回调函数确保dom操作完成后调用
+3. 在操作dom后想立刻获取或执行dom相关操作就需用到 nextTick 方法
+```
+
+### 22. 全局守卫、路由独享守卫、组件内守卫区别：
+```
+全局守卫：全局性的每次导航都会执行
+路由独享守卫：导航与路由相相关时触发
+组件内守卫：可获取组件实例组件
+```
+
+### 21. vue-router如何保护指定路由安全：
+```
+1. 通过导航守卫保护路由安全，设置守卫钩子函数判断用户登入状态和权限
+2. 有3个层级：全局前置守卫beforeEach，路由独享守卫beforeEach，组件内守卫beforeRouteEnter
+   全局守卫：router.beforeEach((to, from, next) => {}) 每次路由导航时执行，判断用户是否可以继续导航 禁止：next(false)，正常：next()，重定向：next(path)
+```
+
+### 20. vue组件通信方式：
+```
+props、$emit/$on、$children/$parent、$attrs/$listeners、provide/inject、ref、$root、eventBus、vuex 
+1. 父子组件通信：props、$emit/$on、$children/$parent、$attrs/$listeners、ref
+2. 兄弟组件通信：$parent、$root、eventBus、vuex
+3. 跨层级关系: provide/inject、eventBus、vuex
+```
+
+### 19. vuex使用理解：
+```
+1. vuex是一个专用的状态管理库
+2. 解决了多组件之间的状态共享问题，保证简洁的单向数据流
+3. 业务足够大需要维护大量状态时使用vuex，否则可使用一个简单的store模式
+4. 数据响应式原理：通过new vue实例把状态设置到data里面，通过vue来实现数据响应式
+5. 工作流程：dispatch -> actions -> commit -> mutations -> state -> render -> Vue components
+```
+
+### 18. vue响应式为什么重写数组push、pop、shift、unshift、splice、sort、reverse方法：
+```
+因为 Object.defineProperty 无法监听数组变化?
+其实 Object.defineProperty 本身是可以监控到数组下标的变化的，只是在 Vue 的实现中，从性能/体验的性价比考虑，放弃了这个特性
+Object.defineProperty 在数组中的表现和在对象中的表现是一致的，数组的索引就可以看做是对象中的 key。
+重点：当使用 unshift、shift 等方法时会改变数组数据中原来的key顺序会牵连其它数据触发 getter 和 setter 方法来改变 key
+操作数组既然会带来很多副作用的数据响应式这显然是不对的，所以vue干脆就舍弃了通过 defineProperty 监听数组
+proxy则原生的解决了数据响应式的问题
+(参考文献：https://www.infoq.cn/article/spcmacrdazqfmlbgjegr)
+```
+
+### 17. vue性能优化：
+```
+1. 路由组件懒加载：component: () => import('Foo.vue')
+2. keep-alive 缓存页面
+3. v-show 代替 v-if 复用频繁切换的页面
+4. 冻结不需要响应式的数据 created() { ... this.pageData = Object.freeze(pageData) }
+5. 链表长采用 vue-virtual-scroller、vue-virtual-scroll-list 虚拟滚动渲染部分区域节点
+6. 启用定时器时在 beforeDestroy 内手动移除，防止异常关闭页面带来的内存泄露
+7. 图片懒加载 vue-lazyload: <img v-lazy="/static/img/1.png">
+8. 无状态组件标记为函数式组件：<template functional>
+9. 子组件分割避免因为一小部分数据变化导致整个组件重新渲染
+10. ssr服务端渲染SEO优化
+```
+
+### 16. vue的设计原理：
+```
+1. 渐进式JavaScript框架，可以由简单到复杂的去使用它
+2. 易用性：提供数据响应式，声明式模板语法和基于配置的组件系统等，使用户只需关注核心业务逻辑
+3. 灵活性：业务足够小，仅使用vue核心特性即可完成功能，规模扩大时引入路由、状态管理、vue-cli等
+4. 高效性：虚拟DOM和diff算法轻松解决频繁操作dom带来的性能损失，vue3中引入proxy对数据响应式与对静态内容标记的编译方式使页面渲染更高效
+```
+
+### 15. vue渲染过程解析：
+```
+1. 把模板编译为render函数 (参考源码34行：https://github.com/vuejs/vue/blob/dev/src/platforms/web/entry-runtime-with-compiler.js) 可见 render > template > el
+2. 实例进行挂载, 根据根节点render函数的调用，递归的生成虚拟dom
+3. 对比虚拟dom，渲染到真实dom
+4. 组件内部data发生变化，组件和子组件引用data作为props重新调用render函数，生成虚拟dom, 返回到步骤3
+```
+### 14. vue中diff算法原理：
+```
+1. diff算法是虚拟dom技术必然的产物，通过对新旧虚拟dom比较（diff），将变化的地方更新在真实dom上，diff算法则让比较过程更高效，时间复杂度降至O(n)
+2. vue2.x 中为了降低watcher粒度，每个组件只有一个wathcher，只有引入diff算法才能精确找到发生变化的位置
+3. vue中diff执行的时刻是组件实例执行其更新函数时，它会比对上一次渲染结果oldVnode和新的渲染结果newVnode, 此过程称为patch
+4. diff算法遵循深度优先、同层比较的策略：两个节点之间比较会根据它们是否拥有子节点或者文本节点做不同操作  
+   比较两组子节点是算法的重点，首先比较头尾节点可能相同 共4种比较，如果没有找到相同节点才遍历查找，查找结束再处理剩下节点
+   借助key可以精确高效的找到相同节点，让patch过程更高效
+```
+
 ### 13. vue中key的作用和工作原理：
 ```
 key能够高效更新虚拟DOM，其原理是vue在patch过程中通过key精确判断两个节点是否相同，从而避免相同节点再次渲染，减少DOM操纵提高性能
@@ -17,8 +123,8 @@ key能够高效更新虚拟DOM，其原理是vue在patch过程中通过key精确
 ### 11. v-if和v-for谁的优先级高，如果同时出现，应该怎么优化性能：
 ```
 v-for解析优先级高于v-if (原因见vue源码：src/compiler/codegen/index.js 64行)
-如果同时出现，每次渲染都会先执行循环再判断条件
-优化：在外层嵌套一个template进行v-if判断
+如果同时出现，每次渲染都会先执行循环再判断条件 因为v-if在v-for后面执行的作用是为了获取v-for遍历出来的item
+优化：如果v-if与item无关则在外层嵌套一个template进行v-if判断
 ```
 
 ### 10. 继承 mixins 指向问题：
@@ -80,8 +186,8 @@ mixins: [ mixin1, mixin2 ]
 
 ### 7. <keep-alive> 作用：
 ```html
-<!-- include包含的组件(可以为字符串，数组，以及正则表达式,只有匹配的组件会被缓存) -->
-<!-- exclude排除的组件(以为字符串，数组，以及正则表达式,任何匹配的组件都不会被缓存) -->
+<!-- include 包含的组件(可以为字符串，数组，以及正则表达式,只有匹配的组件会被缓存) -->
+<!-- exclude 排除的组件(以为字符串，数组，以及正则表达式,任何匹配的组件都不会被缓存) -->
 <!-- max缓存组件的最大值(类型为字符或者数字,可以控制缓存组件的个数) -->
 <keep-alive :include="[home]" exclude="error" max=10>
     <router-view />
@@ -136,7 +242,7 @@ export default {
 //3.方法 （组件为被渲染）
 beforeRouteEnter(to, from, next) {
     fatchData(to.params.id, post => {
-        next(vm => vm.setData(posy))    //请求数据后通过next内回调设置到组件内
+        next(vm => vm.setData(post))    //请求数据后通过next内回调设置到组件内
     })
 }
 
@@ -172,10 +278,12 @@ beforeRouteUpdate(to, from, next) {
 组件使用：
     通信：    props, $emit/$on, provide/inject, $children/$parent, $root, $attrs/$listeners
     内容分发：<slot>, <template>, v-slot
-    优化：    is, keep-alive, 异步组件
+    优化：    is, keep-alive, 异步组件，遵循单向数据流原则
 组件本质：
-    组件配置 -> VueComponent实例 -> render() -> Virtual DOM -> DOM
-    目的产生虚拟DOM
+    组件配置:
+        vue组件是基于配置的，我们通常写的是组件配置而并非组件本身，框架会自动生成构造函数，目的产生虚拟DOM
+        -> VueComponent实例 -> render() -> Virtual DOM -> DOM
+    
 ```
 
 ### 2. vue的 activated 和 deactivated 生命周期作用:
