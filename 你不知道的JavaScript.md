@@ -1,5 +1,53 @@
 # 你不知道的 JavaScript
 
+
+### 26. defineReactive与porxy原理：
+```js
+/************ vue 2.x ************/
+function observer(value) {
+  if (typeof value === 'object' && typeof value !== null) {
+    for (key in value) {
+      defineReactive(value, key, value[key])
+    }
+  }
+}
+
+function defineReactive(obj, key, value) {
+  observer(value)
+  Object.defineProperty(obj, key, {
+    get(){
+      // watcher监听
+      return value
+    }
+    set(newValue) {
+      if (value !== newValue) {
+        observer(newValue)
+        value = value
+        //触发watcher更新组件
+      }
+    }
+  })
+}
+let obj = { aa: { bbb:'b', ccc: 333} }
+observer(obj)
+console.log(obj)
+
+/************ vue 3 ************/
+let handler = {
+  get(target, key) {
+    if (typeof target[key] == 'object' && target[key] !== null) {
+      return new Proxy(target[key], handler)
+    }
+    return Reflect.get(target, key)
+  },
+  set(target, key) {
+    return Reflect.set(target, key, value)
+  }
+}
+let obj2 = { aa: { bbb:'b', ccc: 333} }
+let proxy = new Proxy(obj2, handler)
+
+```
 ### 25. 跨域解决⽅案：
 ```js
 1. JSONP(JSON with Padding)，前端+后端⽅案，绕过跨域
@@ -257,7 +305,7 @@ for(var i = 0;i < 5;i++){
   },i * 1000)
 }
 //案例二：
-for(var i = 0;i < 5;i++){
+for(let i = 0;i < 5;i++){
   setTimeout(()=>{
     console.log(i)  //输出0 1 2 3 4 原因：let变量没有提升每个块级作用域里面的 i 独立存在
   },i * 1000)
@@ -278,8 +326,8 @@ console.log(b.prototype) //undefined
 
 ### 12. Array.forEach()与 Array.map()的区别，Array.slice()与 Array.splice()的区别
 ```js
-forEach: 遍历 并发                   |  map:     修改数据 返回数组
-slice:   返回截取数组 不改变原始数组  |  splice:  返回截取数组  改变原始数组 可插入值
+forEach: 遍历 for可await但forEach不能 |  map:     修改数据 返回数组
+slice:   返回截取数组 不改变原始数组   |  splice:  返回截取数组  改变原始数组 可插入值
 ```
 
 ### 11. 写出以下代码运行后的输出

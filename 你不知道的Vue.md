@@ -17,7 +17,27 @@
 
 ## vue 2.x
 
-### nextTick作用及原理：
+### 25. vue生命周期:
+```
+1. beforeCreate在实例初始化之后，数据观测(data observer)和event/watcher事件配置之前被调用。
+2. created 实例已经创建完成之后被调用。在这一步, 实例已完成以下的配置:数据观测(data observer),属性和方法的运算，watch/event 事件回调。这里没有$el
+3. beforeMount 在挂载开始之前被调用:相关的render函数首次被调用。
+4. mounted el 被新创建的vm.$el替换,并挂载到实例上去之后调用该钩子。
+5. beforeUpdate 数据更新时调用,发生在虚拟dom重新渲染和打补丁之前。
+6. updated由于数据更改导致的虚拟DOM重新渲染和打补丁，在这之后会调用该钩子。
+7. beforeDes troy实例销毁之前调用。在这一步， 实例仍然完全可用。
+8. destroyed Vue实例销毁后调用。调用后, Vue实例指示的所有东西都会解绑定,所有的事件监听器会被移除,所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。
+9. 组件缓存生命周期：keep-alive (activated和deactivated)
+```
+
+### 24. vue中模板编译compiler原理：
+```js
+1. 将template模板转换成ast树 - parserHTML  //{ static: fasle, tag: 'div', attrs, parent, type, children: [...] }
+2. 对静态语法做静态标记 - markUp diff来优化 静态节点跳过diff操作
+3. 重新生成代码 - codeGen
+```
+
+### 23. nextTick作用及原理：
 ```
 1. vue中的异步更新策略导致数据更改后不会立刻改变dom，此时需要第一时间获取更新后的dom则使用nextTick
 2. vue中dom更新是利用微任务异步执行的。避免了 wathcher 多次触发带来的重复渲染，
@@ -115,7 +135,7 @@ key能够高效更新虚拟DOM，其原理是vue在patch过程中通过key精确
 ### 12.  Vue组件data选项为什么必须是个函数而Vue的根实例则没有此限制：
 ```
 1. vue组件可能存在多个实例，所以每次组件复用时 data 都会指向同一个地址，当data选项是函数时每次获取data都返回一个全新对象
- (原因见vue源码：src/core/instance/state.js 114 行)
+ 通过判断了是否存在vm来报错"data应该是一个函数" (原因见vue源码：src/core/instance/state.js 114 行)
 
 2. 根实例只存在一个，所以规避了这种情况
 ```
@@ -134,6 +154,9 @@ import mixinModel from '~/plugins/mixins/mixinModel' //配置打包只引入一�
 export default {
   mixins: [ mixinModel ]  //每个组件mixinModel内的方法都指向同一个方法
 }  
+
+mixin使用：抽离公共组件，通过margeOptions合并，类似对象的继承 类似react内的高阶组件
+mixin缺陷："命名冲突" "依赖问题" "数据来源问题"
 ```
 
 ### 9. 在vue的组件中，data用function返回对象原因：
