@@ -1,6 +1,12 @@
 # 你不知道的 JavaScript
 
-
+### 27. 取大于17位的Number类型解决精度丢失: (转字符串)
+```js
+var text = '{ "id":18014398509481985 }';
+const id= text.match(/\d{17,}/)[0]; // 正则获取大于17位数字的值
+text = text.replace(id,`"${id}"`); // 补上双引号
+const data = JSON.parse(text);
+```
 ### 26. defineReactive与porxy原理：
 ```js
 /************ vue 2.x ************/
