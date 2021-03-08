@@ -1,6 +1,19 @@
 # 你不知道的 html
 
-**1. 移动端点击事件 300ms 延迟如何去掉**
+
+### H5新特性:
+```
+用于绘画 canvas 元素
+定位
+websocket
+拖拽
+用于媒介回放的 video 和 audio 元素。
+本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；sessionStorage 的数据在浏览器关闭后自动删除。
+语意化标签更好的内容元素，比如 article、footer、header、nav、section。
+表单控件，calendar、date、time、email、url、search
+```
+
+### 1. 移动端点击事件 300ms 延迟如何去掉
 ```html
 问题原因：
 当用户一次点击屏幕之后，浏览器并不能立刻判断用户是要进行双击缩放，还是想要进行单击操作。因此，iOS Safari 就等待 300 毫秒，以判断用户是否再次点击了屏幕。

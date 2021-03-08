@@ -1,5 +1,27 @@
 # 你不知道的 JavaScript
 
+
+### 28. 函数柯里化：
+```js
+function curry(fn) {
+  let arr = [].slice.call(arguments, 1)
+  return function _curry() {
+    arr = [...arr, ...arguments]
+    if (arr.length >= fn.length) {
+      return  fn(...arr)
+     } else {
+      return _curry
+    }
+  }
+}
+
+function add(a, b, c) {
+  return a + b + c
+}
+
+const addCurry = curry(add)
+addCurry(1)(2)(3)  //6
+```
 ### 27. 取大于17位的Number类型解决精度丢失: (转字符串)
 ```js
 var text = '{ "id":18014398509481985 }';
