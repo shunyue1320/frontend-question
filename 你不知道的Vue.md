@@ -17,6 +17,18 @@
 
 ## vue 2.x
 
+### 27. Vue的mode中hash与history的区别：
+```
+在hash模式下：
+所有的页面跳转都是客户端进行操作，因此对于页面拦截更加灵活；
+但每次url的改变不属于一次http请求，所以不利于SEO优化。
+
+在history模式下:
+借助history.pushState实现页面的无刷新跳转；这种方式URL的改变属于http请求，
+因此会重新请求服务器，这也使得我们必须在服务端配置好地址，否则服务端会返回404，
+为确保不出问题，最好在项目中配置404页面
+```
+
 ### 26. vue模式：
 ```
 单例模式：vue就是单例模式，一些全局弹窗组件也是单例模式
@@ -59,9 +71,16 @@
 
 ### 22. 全局守卫、路由独享守卫、组件内守卫区别：
 ```
-全局守卫：全局性的每次导航都会执行
-路由独享守卫：导航与路由相相关时触发
-组件内守卫：可获取组件实例组件
+beforeEach   // 全局前置路由守卫 全局性的每次导航都会执行
+beforeEnter  //路由独享守卫 导航与路由相相关时触发
+beforeRouteEnter  // 组件内部路由
+beforeResolve // 全局解析守卫
+afterEach  // 全局后置路由守卫
+
+//组件内部路由
+beforeRouteEnter  //内部前置路由 组件实例还没被创建 无this
+beforeRouteUpdate //动态路由id改变时页面不刷新问题可在这里监听
+beforeRouteLeave //导航离开该组件路由 获取下一跳去向
 ```
 
 ### 21. vue-router如何保护指定路由安全：
@@ -69,6 +88,12 @@
 1. 通过导航守卫保护路由安全，设置守卫钩子函数判断用户登入状态和权限
 2. 有3个层级：全局前置守卫beforeEach，路由独享守卫beforeEach，组件内守卫beforeRouteEnter
    全局守卫：router.beforeEach((to, from, next) => {}) 每次路由导航时执行，判断用户是否可以继续导航 禁止：next(false)，正常：next()，重定向：next(path)
+路由执行顺序：
+beforeEach   // 全局前置路由守卫 判断用户权限是否继续导航或跳转到登入页面，vip购买页面
+beforeEnter  //路由独享守卫 
+beforeRouteEnter  // 组件内部路由
+beforeResolve // 全局解析守卫
+afterEach  // 全局后置路由守卫
 ```
 
 ### 20. vue组件通信方式：
