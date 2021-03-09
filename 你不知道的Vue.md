@@ -161,6 +161,7 @@ v-for解析优先级高于v-if (原因见vue源码：src/compiler/codegen/index.
 
 ### 10. 继承 mixins 指向问题：
 ```js
+// es6 导出是动态映射，所以多处导入同一mixin会造成mixin内变量共用
 import mixinModel from '~/plugins/mixins/mixinModel' //配置打包只引入一次
 //无论for生成了多少组件， 所有组件mixins内继承的方法始终指向同一个内存地址
 export default {

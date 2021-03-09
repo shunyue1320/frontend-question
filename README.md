@@ -41,6 +41,7 @@ An Front-end technology sharing and exchange.
 ## Vue3优秀开源项目集:
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
+|[trois](https://github.com/troisjs/trois)| [3D 库](https://troisjs.github.io/examples/demos/1.html) | ![stars](https://img.shields.io/github/stars/troisjs/trois?label=Stars&logo=GitHub) |
 |[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)| [模板 vue3-admin](https://armour.github.io/vue-typescript-admin-template/#/guide/index) | ![stars](https://img.shields.io/github/stars/Armour/vue-typescript-admin-template?label=Stars&logo=GitHub) |
 
 
