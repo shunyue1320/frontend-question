@@ -37,11 +37,21 @@ An Front-end technology sharing and exchange.
 [8. 🌶 你不知道的 JavaScript](https://github.com/shunyue1320/frontend-question/blob/master/你不知道的JavaScript.md)  
 
 
+## fultter优秀开源项目集： 
+| 项目  | 网址 | stars |
+| ------------- | ------------- | ----- |
+|[FlutterUnit](https://github.com/toly1994328/FlutterUnit)| [项目介绍](https://juejin.cn/post/6844904147045597191) | ![stars](https://img.shields.io/github/stars/toly1994328/FlutterUnit?label=Stars&logo=GitHub) |
+|[FlutterDouBan](https://github.com/kaina404/FlutterDouBan)| Flutter豆瓣客户端 | ![stars](https://img.shields.io/github/stars/kaina404/FlutterDouBan?label=Stars&logo=GitHub) |
+|[fultter-example-app](https://github.com/zhongmeizhi/fultter-example-app)| [项目介绍](https://zhongmeizhi.github.io/fultter-example-app/) | ![stars](https://img.shields.io/github/stars/zhongmeizhi/fultter-example-app?label=Stars&logo=GitHub) |
+|[gsy_github_app_flutter](https://github.com/CarGuo/gsy_github_app_flutter)| [flutter book](https://github.com/CarGuo/gsy_flutter_book) | ![stars](https://img.shields.io/github/stars/CarGuo/gsy_github_app_flutter?label=Stars&logo=GitHub) |
+|[Best-Flutter-UI-Templates](https://github.com/mitesh77/Best-Flutter-UI-Templates)| Flutter UI 模板 | ![stars](https://img.shields.io/github/stars/mitesh77/Best-Flutter-UI-Templates?label=Stars&logo=GitHub) |
 
 ## Vue3优秀开源项目集:
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
+|[mini-vue](https://github.com/cuixiaorui/mini-vue)| [视频教程](https://www.bilibili.com/video/BV1Zy4y1J73E) | ![stars](https://img.shields.io/github/stars/cuixiaorui/mini-vue?label=Stars&logo=GitHub) |
 |[trois](https://github.com/troisjs/trois)| [3D 库](https://troisjs.github.io/examples/demos/1.html) | ![stars](https://img.shields.io/github/stars/troisjs/trois?label=Stars&logo=GitHub) |
+|[newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)| [新峰商城](http://47.99.134.126:5008/#/home) | ![stars](https://img.shields.io/github/stars/newbee-ltd/newbee-mall-vue3-app?label=Stars&logo=GitHub) |
 |[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)| [模板 vue3-admin](https://armour.github.io/vue-typescript-admin-template/#/guide/index) | ![stars](https://img.shields.io/github/stars/Armour/vue-typescript-admin-template?label=Stars&logo=GitHub) |
 
 
@@ -91,10 +101,11 @@ An Front-end technology sharing and exchange.
 ## 前端学习平台：
 | 学习平台 | stars |
 | ------------- | ------------- |
-[freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) [[网址]](https://www.freecodecamp.org/learn) | ![stars](https://img.shields.io/github/stars/coffe1891/frontend-hard-mode-interview?label=Stars&logo=GitHub) |
+[freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) [[网址]](https://www.freecodecamp.org/learn) | ![stars](https://img.shields.io/github/stars/freeCodeCamp/freeCodeCamp?label=Stars&logo=GitHub) |
+[Flutter学习案例](https://github.com/iampawan/FlutterExampleApps) | ![stars](https://img.shields.io/github/stars/iampawan/FlutterExampleApps?label=Stars&logo=GitHub) |
 
 
-## 前端学习推荐：
+## 前端学习书籍：
 | 书籍 | stars |
 | ------------- | ------------- |
 [《前端book》](https://github.com/kolf/book) | ![stars](https://img.shields.io/github/stars/kolf/book?label=Stars&logo=GitHub) |
