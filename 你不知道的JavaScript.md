@@ -1,6 +1,151 @@
 # 你不知道的 JavaScript
 
 
+
+
+### 数组扁平化:
+```
+
+```
+### 图片懒加载的伪代码实现:
+```js
+// onload是等所有的资源文件加载完毕以后再绑定事件
+window.onload = function(){
+  var imgs = document.querySelectorAll('img')  // 获取图片列表，即img标签列表
+  function getTop(e) { return e.offsetTop }    // 获取到浏览器顶部的距离
+  function lazyload(imgs){
+    var h = window.innerHeight                 // 可视区域高度
+    var s = document.documentElement.scrollTop || document.body.scrollTop // 滚动区域高度
+    for(var i=0;i<imgs.length;i++){
+      if ((h+s)>getTop(imgs[i])) { // 图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
+        (function(i){            // 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
+          setTimeout(function(){
+            // 不加立即执行函数i会等于9 隐形加载图片或其他资源， 创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
+            var temp = new Image();
+            temp.src = imgs[i].getAttribute('data-src');//只会请求一次
+            temp.onload = function(){ // onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
+              imgs[i].src = imgs[i].getAttribute('data-src') // 获取自定义属性data-src，用真图片替换假图片
+            }
+          },2000)
+        })(i)
+      }
+    }
+  }
+  lazyload(imgs)
+  window.onscroll =function(){ lazyload(imgs) } // 滚屏函数
+}
+```
+
+### js为什么 0.1+0.2 != 0.3
+```
+在JavaScript中数字是以IEEE 754双精度64位浮点数来存储的，编程中的浮点数的精度往往都是有限的
+解决方法：
+  同时乘以10相加后在除以10
+```
+
+### 重绘和回流的解释:
+```
+回流（reflow）/ 重排: 元素的几何属性发生变化（宽和高等）, 导致浏览器渲染树部分失效需重新构建渲染树
+重绘（repaint）：元素外貌发生变化 如背景色字体等，导致浏览器重新绘制
+重排必定会引发重绘，但重绘不一定会引发重排
+如何避免触发回流和重绘：
+  合并对Dom的多次修改，减少Dom操作
+  避免频繁使用 style，而是采用修改class的方式
+  也可以先为元素设置display:none，操作结束后再把它显示出来。因为display在属性为none的元素上进行的DOM操作不会引发回流和重绘
+  使用createDocumentFragment进行批量的 DOM 操作。
+  对于 resize、scroll 等进行防抖/节流处理
+  避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。
+  利用 CSS3 的transform、opacity、filter这些属性可以实现合成的效果，也就是GPU加速。
+```
+
+### es6的新特性:
+```
+1.新的变量声明let和const
+2.模板字符串
+3.箭头函数
+4.函数的参数默认值可以在括号里面直接设置默认值了
+5.Spread / Rest 操作符指的是 ...
+6.对象和数组解构
+7.for...of用于遍历一个迭代器，如数组 , for...in 用来遍历对象中的属性
+8.ES6中的类:ES6 中支持 class 语法，不过，ES6的class不是新的对象继承模型，它只是原型链的语法糖表现形式。(在类中定义函数不需要使用 function 关键词)
+9.async await
+10.promise
+
+```
+### 32. 浏览器缓存：
+```
+通常浏览器缓存策略分为两种："强缓存" 和 "协商缓存"，并且缓存策略都是通过设置 HTTP 请求头 来实现的。
+1.	强缓存:
+    强缓存不会向服务器发送请求，直接从缓存中读取资源。强缓存可以通过设置两种 HTTP Header 实现：Expires 和 Cache-Control。
+    Expires 和 Cache-Control区别：Cache-Control是http1.1的产物，两者同时存在的话，Cache-Control优先级高于Expires；在某些不支持HTTP1.1的环境下，Expires就会发挥用处
+2.  协商缓存:
+    协商缓存就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程，主要有以下两种情况：
+    Last-Modified 和 If-Modified-Since
+```
+
+### 31. async 和 await 、promise 的区别:
+```
+async/await是写异步代码的新方式，以前的方法有回调函数和Promise。　　
+async/await是基于Promise实现的，它不能用于普通的回调函数。　　
+async/await与Promise一样，是非阻塞的。　　
+async/await使得异步代码看起来像同步代码，这正是它的魔力所在。
+为什么Async/Await好：
+使用async函数可以让代码简洁很多，不需要像Promise一样需要些then，不需要写匿名函数处理Promise的resolve值，也不需要定义多余的data变量，还避免了嵌套代码。　　
+错误处理：Async/Await 让 try/catch 可以同时处理同步和异步错误。
+```
+### 30. 深度克隆：
+```js
+function deepClone(target) {
+  if (typeof target === 'object') {
+    const cloneTarget = Array.isArray(target) ? [] : {}
+    for (const key in target) {
+      cloneTarget[key] = deepClone(target[key])
+    }
+    return cloneTarget
+  } else {
+    return target
+  }
+}
+```
+
+### 29. axios请求并发控制逻辑：
+```js
+// formDatas: 请求数组， 并发请求数：limit
+async sendRequest(formDatas, limit = 3) {
+  return new Promise((reslove, reject) => {
+    const len = formDatas.length
+    let counter = 0, isStop = false // counter:总请求数 isStop:请求停止
+    function async start() {
+      if (isStop) retrun
+      const task = formDatas.shift()
+      if (task) {
+        try {
+          await this.$http.post('/***')
+          if (counter == len - 1) {
+            resolve() // 全部请求成功
+          } else {
+            counter++
+            start() // 一个请求结束继续下一个请求开始
+          }
+        } catch(error) {
+          if (task.error < 3) { 
+            task.error++
+            formDatas.unshift(task) // 请求失败后将其放回原位
+            start() // 重新开始请求
+          } else { // 重复请求失败3次终止所有请求
+            isStop = true
+          }
+        }
+      }
+    }
+    while (limit > 0) { // 同时并发limit个请求
+      start()
+      limit--
+    }
+  })
+}
+```
+
 ### 28. 函数柯里化：
 ```js
 function curry(fn) {
@@ -81,7 +226,7 @@ let proxy = new Proxy(obj2, handler)
 1. JSONP(JSON with Padding)，前端+后端⽅案，绕过跨域
   前端构造script标签请求指定URL（由script标签发出的GET请求不受同源策略限制），服务器返
   回⼀个函数执⾏语句，该函数名称通常由查询参callback的值决定，函数的参数为服务器返回的
-  json数据。该函数在前端执⾏后即可获取数据
+  json数据。该函数在前端执⾏后即可获取数据 
 
 2. 代理服务器
 请求同源服务器，通过该服务器转发请求⾄⽬标服务器，得到结果再转发给前端。

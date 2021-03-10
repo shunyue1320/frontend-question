@@ -1,5 +1,21 @@
 # 你不知道的 Webpack
 
+### webpack的优化有哪些:
+```
+打包出代码的优化:
+  js代码压缩优化 ("terser-webpack-plugin")
+  css代码抽离 ('mini-css-extract-plugin')
+  css代码压缩优化 ('optimize-css-assets-webpack-plugin')
+  js代码分割 ('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  tree-shaking:  es6模块化方式（去除无效的代码）
+打包速度的优化:
+  设置resolve.alias(别名),resolve.extensions(可省略的后缀)
+  压缩js，TerserPlugin配置parallel:true
+  使用多线程执行webpack: thread-loader / happypack
+  预编译，设置动态链路DllPlugin
+
+```
+
 ### 2. Webpack缓存
 ```
 options: {
