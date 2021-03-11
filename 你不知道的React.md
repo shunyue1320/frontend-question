@@ -1,13 +1,19 @@
 # 你不知道的 React
 
 
+
 ### react性能优化：
 ```
-1. 减少不必要的渲染，如用 shouldComponentUpdate, PureComponent, React.meno
+1. 减少不必要的渲染，如用 shouldComponentUpdate, PureComponent(浅比较), React.meno
 2. 数据缓存：useMemo缓存参数， useCallback缓存函数
 3. 能不用就不用 context, props
 4. 懒加载，对长页列表懒加载
 5. 减少http请求
+```
+
+### react-router-dom BrowserRouter优先级:
+```
+children(和路径无关) > component > render
 ```
 
 ### setState的同步异步问题:
