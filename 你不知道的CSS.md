@@ -1,5 +1,29 @@
 ### 你不知道的 Css
 
+
+## css新特性：
+```css
+/*1. 动态模糊（Motion Blur）*/
+.animated-layer {
+  /* GPU加速动画 */
+  animation: rotate .5s linear infinite;
+  /* 向引擎请求动态模糊
+    * motion-rendering可以接受inherit | initial | auto | none | blur 值
+  */
+  motion-rendering: blur; 
+  /* 类似于相机的快门，指的是快门角度，用来控制模糊量或模糊强度
+    * motion-shutter-angle可受任意角度值 inherit | initial | auto = 180deg | [0deg, ..., 720deg]
+  */
+  motion-shutter-angle: 180deg;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+```
+
 ### box-sizing 属性定义了应该如何计算一个元素的总宽度和总高度:
 ```
 1.	box-sizing: content-box;(默认值) 标准盒子模型:  width = 内容的宽度， height = 内容的高度

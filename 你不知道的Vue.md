@@ -17,6 +17,16 @@
 
 ## vue 2.x
 
+### vue错误收集：
+```
+Vue.config.errorHandler = function(err, vm, info) {};
+
+warnHandler
+renderError
+errorCaptured
+window.onerror (不仅仅针对 Vue)
+```
+
 ### 27. Vue的mode中hash与history的区别：
 ```
 在hash模式下：
