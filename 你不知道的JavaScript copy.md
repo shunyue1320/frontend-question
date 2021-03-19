@@ -1,5 +1,14 @@
 # 你不知道的 JavaScript
 
+### axios拦截请求:
+```
+axios.interceptors.request.use(fn, err)
+axios.interceptors.response.use(fn, err)
+```
+### ajax原理：
+```
+封装了 XMLHttpRequest or ActiveXObject
+```
 
 ### 手写eventHub:
 ```js

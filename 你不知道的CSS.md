@@ -47,7 +47,7 @@
 ```css
 .box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  /* 水平居中 */
+  align-items: center; /* 垂直居中 */
 }
 ```

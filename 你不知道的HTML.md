@@ -1,16 +1,12 @@
 # 你不知道的 Html
 
 
-### H5新特性:
+### html5新标签:
 ```
-用于绘画 canvas 元素
-定位
-websocket
-拖拽
-用于媒介回放的 video 和 audio 元素。
-本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；sessionStorage 的数据在浏览器关闭后自动删除。
-语意化标签更好的内容元素，比如 article、footer、header、nav、section。
-表单控件，calendar、date、time、email、url、search
+用于绘画的 canvas 元素
+用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持
+新的特殊内容元素，比如 article、footer、header、nav、section
+新的表单控件，比如 calendar、date、time、email、url、search
 ```
 
 ### 1. 移动端点击事件 300ms 延迟如何去掉
