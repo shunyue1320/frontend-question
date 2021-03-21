@@ -69,12 +69,13 @@ An Front-end technology sharing and exchange.
 | [vuestic-admin](https://github.com/epicmaxco/vuestic-admin) | [模板 vuestic-admin](https://vuestic.epicmax.co/admin/dashboard) | ![stars](https://img.shields.io/github/stars/epicmaxco/vuestic-admin?label=Stars&logo=GitHub) |
 | [ant-design-pro](https://github.com/ant-design/ant-design-pro) | [模板 ant-design-pro](https://pro.ant.design/index-cn) | ![stars](https://img.shields.io/github/stars/ant-design/ant-design-pro?label=Stars&logo=GitHub) |
 | [vue-antd-admin](https://github.com/iczer/vue-antd-admin) | [模板 vue-antd-admin](https://iczer.gitee.io/vue-antd-admin/#/login)  | ![stars](https://img.shields.io/github/stars/iczer/vue-antd-admin?label=Stars&logo=GitHub) |
+| [vue-admin-webapp](https://github.com/gcddblue/vue-admin-webapp)| [模板 vue3-admin](https://gcddblue.gitee.io/vue-admin-webapp/#/login?redirect=%2Fdashbord) | ![stars](https://img.shields.io/github/stars/Armour/gcddblue/vue-admin-webapp?label=Stars&logo=GitHub) |
 | [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | [模板 vue-element-admin](https://panjiachen.github.io/vue-element-admin/#/dashboard) | ![stars](https://img.shields.io/github/stars/PanJiaChen/vue-element-admin?label=Stars&logo=GitHub) |
 | [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro) | [模板 ant-design-vue-pro](https://pro.antdv.com)  | ![stars](https://img.shields.io/github/stars/vueComponent/ant-design-vue-pro?label=Stars&logo=GitHub) |
 | [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) | [模板 vue-admin-template](https://panjiachen.github.io/vue-admin-template/#/dashboard) | ![stars](https://img.shields.io/github/stars/PanJiaChen/vue-admin-template?label=Stars&logo=GitHub) |
 | [vue-admin-beautiful](https://github.com/chuzhixin/vue-admin-beautiful) | [模板 vue-admin-beautiful](https://chu1204505056.gitee.io/vue-admin-beautiful-pro/#/index) | ![stars](https://img.shields.io/github/stars/chuzhixin/vue-admin-beautiful?label=Stars&logo=GitHub) |
 | [sing-app-vue-dashboard](https://github.com/flatlogic/sing-app-vue-dashboard)  | [模板 sing-app-vue-dashboard](https://flatlogic.github.io/sing-app-vue-dashboard/#/app/dashboard)  | ![stars](https://img.shields.io/github/stars/flatlogic/sing-app-vue-dashboard?label=Stars&logo=GitHub) |
-|[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)| [模板 vue3-admin](https://armour.github.io/vue-typescript-admin-template/#/guide/index) | ![stars](https://img.shields.io/github/stars/Armour/vue-typescript-admin-template?label=Stars&logo=GitHub) |
+| [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)| [模板 vue3-admin](https://armour.github.io/vue-typescript-admin-template/#/guide/index) | ![stars](https://img.shields.io/github/stars/Armour/vue-typescript-admin-template?label=Stars&logo=GitHub) |
 
 ## Node优秀开源项目集：  
 | 后端  | web端 | 移动端 | stars |
@@ -116,6 +117,7 @@ An Front-end technology sharing and exchange.
 [《免费的编程中文书籍》](https://github.com/justjavac/free-programming-books-zh_CN) | ![stars](https://img.shields.io/github/stars/justjavac/free-programming-books-zh_CN?label=Stars&logo=GitHub) |
 [《Docker从入门到实践》](https://github.com/yeasy/docker_practice)[[电子版]](https://yeasy.gitbook.io/docker_practice/) | ![stars](https://img.shields.io/github/stars/yeasy/docker_practice?label=Stars&logo=GitHub) |
 [《TypeScript入门教程》](https://github.com/xcatliu/typescript-tutorial)[[电子版]](https://ts.xcatliu.com/) | ![stars](https://img.shields.io/github/stars/xcatliu/typescript-tutorial?label=Stars&logo=GitHub) |
+[《深入理解TypeScript》](https://github.com/jkchao/typescript-book-chinese) [[电子版]](https://jkchao.github.io/typescript-book-chinese/#why) | ![stars](https://img.shields.io/github/stars/jkchao/typescript-book-chinese?label=Stars&logo=GitHub) |
 [《你不知道的JavaScript》](https://github.com/getify/You-Dont-Know-JS)[[英文版]](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md) | ![stars](https://img.shields.io/github/stars/getify/You-Dont-Know-JS?label=Stars&logo=GitHub) |
 [《现代JavaScript教程中文版》](https://github.com/javascript-tutorial/zh.javascript.info) [[电子版]](https://zh.javascript.info/) | ![stars](https://img.shields.io/github/stars/javascript-tutorial/zh.javascript.info?label=Stars&logo=GitHub) |
 
