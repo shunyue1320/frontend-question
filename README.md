@@ -54,6 +54,7 @@ An Front-end technology sharing and exchange.
 |[vue3-jd-h5](https://github.com/GitHubGanKai/vue3-jd-h5)| [链猫商城](http://gankai.gitee.io/vue-jd-h5/#/mine) | ![stars](https://img.shields.io/github/stars/GitHubGanKai/vue3-jd-h5?label=Stars&logo=GitHub) |
 |[vue3-antd-admin](https://github.com/buqiyuan/vue3-antd-admin)| [模板 vue3-admin](http://buqiyuan.gitee.io/vue3-antd-admin/#/login?redirect=/dashboard/welcome) | ![stars](https://img.shields.io/github/stars/buqiyuan/vue3-antd-admin?label=Stars&logo=GitHub) |
 |[newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)| [新峰商城](http://47.99.134.126:5008/#/home) | ![stars](https://img.shields.io/github/stars/newbee-ltd/newbee-mall-vue3-app?label=Stars&logo=GitHub) |
+|[vben-admin-thin-next](https://github.com/anncwb/vben-admin-thin-next)| [模板 vue3-vite](https://vvbin.cn/thin/next/#/dashboard/analysis) | ![stars](https://img.shields.io/github/stars/anncwb/vben-admin-thin-next?label=Stars&logo=GitHub) |
 
 
 ## Vue优秀开源项目集：  
