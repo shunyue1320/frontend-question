@@ -109,6 +109,7 @@ An Front-end technology sharing and exchange.
 [Flutter学习案例](https://github.com/iampawan/FlutterExampleApps) | ![stars](https://img.shields.io/github/stars/iampawan/FlutterExampleApps?label=Stars&logo=GitHub) |
 [algorithm算法学习](https://github.com/geekxh/hello-algorithm) [[网址]](https://www.geekxh.com/0.0.%E5%AD%A6%E4%B9%A0%E9%A1%BB%E7%9F%A5/01.html) | ![stars](https://img.shields.io/github/stars/geekxh/hello-algorithm?label=Stars&logo=GitHub) |
 [JavaScript的33个概念](https://github.com/stephentian/33-js-concepts) | ![stars](https://img.shields.io/github/stars/stephentian/33-js-concepts?label=Stars&logo=GitHub) |
+[简洁的JavaScript规范](https://github.com/ryanmcdermott/clean-code-javascript) | ![stars](https://img.shields.io/github/stars/ryanmcdermott/clean-code-javascript?label=Stars&logo=GitHub) |
 
 ## 前端学习书籍：
 | 书籍 | stars |
