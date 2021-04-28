@@ -135,6 +135,7 @@ An Front-end technology sharing and exchange.
 
 ## WebAssembly:
 | 项目 | 网址 | stars |
+| ------------- | ------------- | ----- |
 | [wabt](https://github.com/WebAssembly/wabt) | [WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt) | ![stars](https://img.shields.io/github/stars/WebAssembly/wabt?label=Stars&logo=GitHub) |
 | [emscripten](https://github.com/emscripten-core/emscripten) | [C and C++ to WebAssembly](https://emscripten.org/) | ![stars](https://img.shields.io/github/stars/emscripten-core/emscripten?label=Stars&logo=GitHub) |
 | [assemblyscript](https://github.com/AssemblyScript/assemblyscript) | [TypeScript to WebAssembly](https://www.assemblyscript.org/) | ![stars](https://img.shields.io/github/stars/AssemblyScript/assemblyscript?label=Stars&logo=GitHub) |
