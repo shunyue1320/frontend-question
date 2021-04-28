@@ -70,7 +70,7 @@ An Front-end technology sharing and exchange.
 | [vuestic-admin](https://github.com/epicmaxco/vuestic-admin) | [模板 vuestic-admin](https://vuestic.epicmax.co/admin/dashboard) | ![stars](https://img.shields.io/github/stars/epicmaxco/vuestic-admin?label=Stars&logo=GitHub) |
 | [ant-design-pro](https://github.com/ant-design/ant-design-pro) | [模板 ant-design-pro](https://pro.ant.design/index-cn) | ![stars](https://img.shields.io/github/stars/ant-design/ant-design-pro?label=Stars&logo=GitHub) |
 | [vue-antd-admin](https://github.com/iczer/vue-antd-admin) | [模板 vue-antd-admin](https://iczer.gitee.io/vue-antd-admin/#/login)  | ![stars](https://img.shields.io/github/stars/iczer/vue-antd-admin?label=Stars&logo=GitHub) |
-| [vue-admin-webapp](https://github.com/gcddblue/vue-admin-webapp)| [模板 vue3-admin](https://gcddblue.gitee.io/vue-admin-webapp/#/login?redirect=%2Fdashbord) | ![stars](https://img.shields.io/github/stars/Armour/gcddblue/vue-admin-webapp?label=Stars&logo=GitHub) |
+| [vue-admin-webapp](https://github.com/gcddblue/vue-admin-webapp)| [模板 vue3-admin](https://gcddblue.gitee.io/vue-admin-webapp/#/login?redirect=%2Fdashbord) | ![stars](https://img.shields.io/github/stars/gcddblue/vue-admin-webapp?label=Stars&logo=GitHub) |
 | [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | [模板 vue-element-admin](https://panjiachen.github.io/vue-element-admin/#/dashboard) | ![stars](https://img.shields.io/github/stars/PanJiaChen/vue-element-admin?label=Stars&logo=GitHub) |
 | [ant-design-vue-pro](https://github.com/vueComponent/ant-design-vue-pro) | [模板 ant-design-vue-pro](https://pro.antdv.com)  | ![stars](https://img.shields.io/github/stars/vueComponent/ant-design-vue-pro?label=Stars&logo=GitHub) |
 | [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) | [模板 vue-admin-template](https://panjiachen.github.io/vue-admin-template/#/dashboard) | ![stars](https://img.shields.io/github/stars/PanJiaChen/vue-admin-template?label=Stars&logo=GitHub) |
@@ -132,6 +132,12 @@ An Front-end technology sharing and exchange.
 | [bootstrap-dashboard](https://github.com/codedthemes/datta-able-bootstrap-dashboard) | [bootstrap UI](http://lite.codedthemes.com/datta-able/bootstrap/index.html) | ![stars](https://img.shields.io/github/stars/codedthemes/datta-able-bootstrap-dashboard?label=Stars&logo=GitHub) |
 | [You-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css) | [css效果展示](https://lhammer.cn/You-need-to-know-css/#/zh-cn/typing) | ![stars](https://img.shields.io/github/stars/l-hammer/You-need-to-know-css?label=Stars&logo=GitHub) |
 |  | [css动画创作animista](https://animista.net/) | |
+
+## WebAssembly:
+| 项目 | 网址 | stars |
+| [wabt](https://github.com/WebAssembly/wabt) | [WebAssembly Binary Toolkit](https://github.com/WebAssembly/wabt) | ![stars](https://img.shields.io/github/stars/WebAssembly/wabt?label=Stars&logo=GitHub) |
+| [emscripten](https://github.com/emscripten-core/emscripten) | [C and C++ to WebAssembly](https://emscripten.org/) | ![stars](https://img.shields.io/github/stars/emscripten-core/emscripten?label=Stars&logo=GitHub) |
+| [assemblyscript](https://github.com/AssemblyScript/assemblyscript) | [TypeScript to WebAssembly](https://www.assemblyscript.org/) | ![stars](https://img.shields.io/github/stars/AssemblyScript/assemblyscript?label=Stars&logo=GitHub) |
 
 ## 在线编程平台：
 | 网址 |
