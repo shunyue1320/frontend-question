@@ -116,6 +116,7 @@ An Front-end technology sharing and exchange.
 | ------------- | ------------- |
 [《前端book》](https://github.com/kolf/book) | ![stars](https://img.shields.io/github/stars/kolf/book?label=Stars&logo=GitHub) |
 [《前端内参》](https://github.com/coffe1891/frontend-hard-mode-interview) | ![stars](https://img.shields.io/github/stars/coffe1891/frontend-hard-mode-interview?label=Stars&logo=GitHub) |
+[《很棒的编程书籍》](https://github.com/guanpengchn/awesome-books) | ![stars](https://img.shields.io/github/stars/guanpengchn/awesome-books?label=Stars&logo=GitHub) |
 [《学习webpack力推》](https://github.com/webpack-china/awesome-webpack-cn) | ![stars](https://img.shields.io/github/stars/webpack-china/awesome-webpack-cn?label=Stars&logo=GitHub) |
 [《深入浅出Webpack》](https://github.com/gwuhaolin/dive-into-webpack) [[电子版]](http://webpack.wuhaolin.cn/) | ![stars](https://img.shields.io/github/stars/gwuhaolin/dive-into-webpack?label=Stars&logo=GitHub) |
 [《免费的编程中文书籍》](https://github.com/justjavac/free-programming-books-zh_CN) | ![stars](https://img.shields.io/github/stars/justjavac/free-programming-books-zh_CN?label=Stars&logo=GitHub) |
