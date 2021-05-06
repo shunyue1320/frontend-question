@@ -111,7 +111,7 @@ An Front-end technology sharing and exchange.
 [JavaScript的33个概念](https://github.com/stephentian/33-js-concepts) | ![stars](https://img.shields.io/github/stars/stephentian/33-js-concepts?label=Stars&logo=GitHub) |
 [简洁的JavaScript规范](https://github.com/ryanmcdermott/clean-code-javascript) | ![stars](https://img.shields.io/github/stars/ryanmcdermott/clean-code-javascript?label=Stars&logo=GitHub) |
 
-## 前端学习书籍：
+## 编程学习书籍：
 | 书籍 | stars |
 | ------------- | ------------- |
 [《前端book》](https://github.com/kolf/book) | ![stars](https://img.shields.io/github/stars/kolf/book?label=Stars&logo=GitHub) |
@@ -124,7 +124,9 @@ An Front-end technology sharing and exchange.
 [《TypeScript入门教程》](https://github.com/xcatliu/typescript-tutorial)[[电子版]](https://ts.xcatliu.com/) | ![stars](https://img.shields.io/github/stars/xcatliu/typescript-tutorial?label=Stars&logo=GitHub) |
 [《深入理解TypeScript》](https://github.com/jkchao/typescript-book-chinese) [[电子版]](https://jkchao.github.io/typescript-book-chinese/#why) | ![stars](https://img.shields.io/github/stars/jkchao/typescript-book-chinese?label=Stars&logo=GitHub) |
 [《你不知道的JavaScript》](https://github.com/getify/You-Dont-Know-JS)[[英文版]](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md) | ![stars](https://img.shields.io/github/stars/getify/You-Dont-Know-JS?label=Stars&logo=GitHub) |
+[《Java技术书籍大全100本》](https://github.com/dahuoyzs/javapdf) | ![stars](https://img.shields.io/github/stars/dahuoyzs/javapdf?label=Stars&logo=GitHub) |
 [《现代JavaScript教程中文版》](https://github.com/javascript-tutorial/zh.javascript.info) [[电子版]](https://zh.javascript.info/) | ![stars](https://img.shields.io/github/stars/javascript-tutorial/zh.javascript.info?label=Stars&logo=GitHub) |
+[《最新1000多本计算机电子书免费下载》](https://github.com/itdevbooks/pdf) | ![stars](https://img.shields.io/github/stars/itdevbooks/pdf?label=Stars&logo=GitHub) |
 
 ## CSS学习平台：
 | 项目 | 网址 | stars |
