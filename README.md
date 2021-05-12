@@ -89,6 +89,7 @@ An Front-end technology sharing and exchange.
 ## React优秀开源项目集： 
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
+[playground-macos](https://github.com/Renovamen/playground-macos) | [MacOS模拟器](https://portfolio.zxh.io/) | ![stars](https://img.shields.io/github/stars/Renovamen/playground-macos?label=Stars&logo=GitHub) |
 [LearnGitBranching](https://github.com/pcottle/learnGitBranching) | [git学习](https://oschina.gitee.io/learn-git-branching/?NODEMO) | ![stars](https://img.shields.io/github/stars/pcottle/learnGitBranching?label=Stars&logo=GitHub) |
 
 
