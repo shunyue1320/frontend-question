@@ -146,6 +146,15 @@ An Front-end technology sharing and exchange.
 | [emscripten](https://github.com/emscripten-core/emscripten) | [C and C++ to WebAssembly](https://emscripten.org/) | ![stars](https://img.shields.io/github/stars/emscripten-core/emscripten?label=Stars&logo=GitHub) |
 | [assemblyscript](https://github.com/AssemblyScript/assemblyscript) | [TypeScript to WebAssembly](https://www.assemblyscript.org/) | ![stars](https://img.shields.io/github/stars/AssemblyScript/assemblyscript?label=Stars&logo=GitHub) |
 
+## java优秀开源项目集： 
+| 项目 | 前端 | stars |
+| ------------- | ------------- | ----- |
+| [电商系统](https://github.com/macrozheng/mall) | [mall-admin-web](https://github.com/macrozheng/mall-admin-web) [网站](http://www.macrozheng.com/admin/#/home) | ![stars](https://img.shields.io/github/stars/macrozheng/mall?label=Stars&logo=GitHub) |
+| [管理系统](https://github.com/elunez/eladmin) | [eladmin-web](https://github.com/elunez/eladmin-web) [网站](https://el-admin.xin/) | ![stars](https://img.shields.io/github/stars/elunez/eladmin?label=Stars&logo=GitHub) |
+| [秒杀系统](https://github.com/qiurunze123/miaosha) | / | ![stars](https://img.shields.io/github/stars/qiurunze123/miaosha?label=Stars&logo=GitHub) |
+| [微人事管理系统](https://github.com/lenve/vhr)     | / | ![stars](https://img.shields.io/github/stars/lenve/vhr?label=Stars&logo=GitHub) |
+| [学之思开源考试系统](https://github.com/mindskip/xzs) | [网站](https://www.mindskip.net/) | ![stars](https://img.shields.io/github/stars/mindskip/xzs?label=Stars&logo=GitHub) |
+
 ## 在线编程平台：
 | 网址 |
 | ---- |
