@@ -49,6 +49,7 @@ An Front-end technology sharing and exchange.
 ## Vue3优秀开源项目集:
 | 项目  | 网址 | stars |
 | ------------- | ------------- | ----- |
+|[flat](https://flat.whiteboard.agora.io/)| [前端](https://github.com/netless-io/flat) [后端](https://github.com/netless-io/flat-server) | ![stars](https://img.shields.io/github/stars/netless-io/flat?label=Stars&logo=GitHub) |
 |[汉兜](https://github.com/antfu/handle)| [游戏](https://handle.antfu.me/) | ![stars](https://img.shields.io/github/stars/antfu/handle?label=Stars&logo=GitHub) |
 |[trois](https://github.com/troisjs/trois)| [3D 库](https://troisjs.github.io/examples/demos/1.html) | ![stars](https://img.shields.io/github/stars/troisjs/trois?label=Stars&logo=GitHub) |
 |[mini-vue3](https://github.com/cuixiaorui/mini-vue)| [视频教程](https://www.bilibili.com/video/BV1Zy4y1J73E) | ![stars](https://img.shields.io/github/stars/cuixiaorui/mini-vue?label=Stars&logo=GitHub) |
